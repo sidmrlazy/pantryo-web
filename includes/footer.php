@@ -1,5 +1,17 @@
 <div class="footer">
-    <p>Footer</p>
+    <div class="col-md-3 footer-parts">
+        <p>Home</p>
+        <p>About us</p>
+        <p>Services</p>
+        <p>Contact us</p>
+    </div>
+
+    <div class="col-md-3 footer-parts">
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+        <p>Disclaimer</p>
+        <p>Blogs</p>
+    </div>
 </div>
 
 <!-- Ionicons Start -->

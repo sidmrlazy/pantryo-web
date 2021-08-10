@@ -12,12 +12,40 @@ font-family: 'Open Sans', sans-serif; */
 #5E3360 
 */
 
+/* ======= Top Nav Start ======= */
+.top-nav {
+  padding: 10px;
+  background-color: #5e3360;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.top-nav p {
+  font-family: "Open Sans", sans-serif;
+  margin-right: 20px !important;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+}
+.top-nav p:hover {
+  font-family: "Open Sans", sans-serif;
+  margin-right: 15px !important;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+  font-size: 14px;
+}
+/* ======= Top Nav End ======= */
+
 /* ======= Navigation Start ======= */
 
 * {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
+}
+.main-nav {
+  display: none;
 }
 
 .navbar {
@@ -68,14 +96,48 @@ font-family: 'Open Sans', sans-serif; */
 
 /* ======= Navigation End ======= */
 
+/* ======= Main banner Start ======= */
+.main-banner {
+  padding-bottom: 150px;
+  padding-top: 100px;
+  /* background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(170, 130, 172, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
+}
+.main-banner h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+.main-banner img {
+  width: 50%;
+  height: auto;
+}
+.main-banner-lottie {
+  width: 350px;
+  height: 350px;
+}
+/* ======= Main banner End ======= */
+
 /* ======= Banner Section Start ======= */
 .banner-captions {
   margin-left: 20px;
 }
+.banner-captions img {
+  width: 60% !important;
+  height: auto;
+}
+.mid-banner-lottie {
+  width: 450px;
+  height: 450px;
+}
 .banner-captions h1 {
   font-family: "Fredoka One", cursive;
   color: #5e3360;
-  font-size: 32px !important;
+  font-size: 44px !important;
 }
 .banner-captions p {
   font-size: 20px;
@@ -97,6 +159,18 @@ font-family: 'Open Sans', sans-serif; */
   height: auto;
 }
 /* ======= Banner Section End ======= */
+
+/* ======= Static Modal Start ======= */
+.static-modal {
+  background-color: #fff;
+  width: 100% !important;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  padding: 20px;
+}
+/* ======= Static Modal End ======= */
 
 /* ======= Customer Animated Text Section Start ======= */
 
@@ -177,6 +251,14 @@ font-family: 'Open Sans', sans-serif; */
 /* ======= Customer Animated Text Section End ======= */
 
 /* ======= Customer Feature Section Start ======= */
+.customer-section-heading h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.customer-section-heading span {
+  color: #5e3360 !important;
+}
 #customer-feature-section {
   /* background-color: #e6af88; */
   padding-top: 100px;
@@ -214,6 +296,87 @@ font-family: 'Open Sans', sans-serif; */
 }
 /* ======= Customer Feature Section End ======= */
 
+/* ======= App Section Start ======= */
+.app-section {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #c6b5c7; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.app-section-card {
+  flex: 1;
+  height: 250px;
+  background: rgb(229, 221, 230);
+  background: linear-gradient(
+    180deg,
+    rgba(229, 221, 230, 1) 0%,
+    rgba(170, 130, 172, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  padding: 20px;
+  border-radius: 20px;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 10px;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.7);
+  border-bottom-right-radius: 100px;
+}
+.app-section-card h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #5e3360;
+  font-size: 24px;
+}
+.app-section-card#green-card {
+  background: rgb(195, 222, 182);
+  background: linear-gradient(
+    180deg,
+    rgba(195, 222, 182, 1) 0%,
+    rgba(143, 196, 131, 1) 100%
+  );
+}
+.app-section-card#orange-card {
+  background: rgb(222, 202, 182);
+  background: linear-gradient(
+    180deg,
+    rgba(222, 202, 182, 1) 0%,
+    rgba(189, 164, 106, 1) 100%
+  );
+}
+/* .app-section {
+  background-color: #fef9e5 !important;
+  padding: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.app-section-content {
+  margin-left: 30px;
+} */
+/* .app-section-mid-content {
+  background-color: #b88cba !important;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+.app-section-mid-content h3 {
+  font-size: 24px !important;
+  font-weight: bold;
+  color: #5e3360;
+}
+.app-section-mid-content p {
+  color: #fff;
+} */
+/* ======= App Section Start ======= */
+
 /* ======= Footer Start ======= */
 .footer {
   position: relative;
@@ -226,6 +389,15 @@ font-family: 'Open Sans', sans-serif; */
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 50px !important;
+  padding: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.footer-parts p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300 !important;
+  text-align: left;
 }
 
 /* ======= Footer End ======= */
@@ -233,7 +405,12 @@ font-family: 'Open Sans', sans-serif; */
 /* ======= Mobile View Start ======= */
 
 @media only screen and (max-width: 600px) {
-  /* Navigation Start */
+  .main-nav {
+    display: initial;
+  }
+  .top-nav {
+    display: none;
+  } /* Navigation Start */
   .navbar {
     background-color: #fff !important;
   }
@@ -262,12 +439,24 @@ font-family: 'Open Sans', sans-serif; */
     align-items: center !important;
     flex-direction: column;
   }
+  /* .banner-captions img {
+    display: none;
+  } */
+  .mid-banner-lottie {
+    width: fit-content;
+    height: auto;
+  }
   .banner-captions img {
+    width: 30% !important;
+    height: auto;
+  }
+  #brand-logo {
     display: none;
   }
   .banner-captions h1 {
     display: flex;
     text-align: center !important;
+    font-size: 36px !important;
   }
   .banner-captions p {
     text-align: center !important;
@@ -290,6 +479,12 @@ font-family: 'Open Sans', sans-serif; */
   }
   .second-section {
     display: none !important;
+  }
+  .static-modal {
+    display: none;
+  }
+  .customer-section-heading h1 {
+    text-align: center;
   }
   /* Customer Animated Section Start */
 }

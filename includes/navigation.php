@@ -1,3 +1,14 @@
+<!-- =========== Top Navigation Start =========== -->
+<div class="top-nav">
+    <p>About us</p>
+    <p>Privacy Policy</p>
+    <p>T&C</p>
+    <p>Disclaimer</p>
+    <p>Blogs</p>
+    <p>Contact us</p>
+</div>
+<!-- =========== Top Navigation End =========== -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -11,7 +22,7 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="main-nav nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About us
                     </a>
@@ -19,7 +30,7 @@
 
                         <li class="d-flex justify-content-start align-items-center p-2">
                             <ion-icon name="business-outline" id="nav-icon"></ion-icon>
-                            <a class="dropdown-item" href="#">Who we are</a>
+                            <a class="dropdown-item" href="#about_us">Who we are</a>
                         </li>
 
                         <li>

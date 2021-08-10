@@ -1,5 +1,6 @@
 <!-- ======== Customer Animated Section Start  ======== -->
-<div class="animated-text-container container-fluid mt-5  pt-5 pb-5">
+<div class="animated-text-container container-fluid mt-5 pt-5 pb-5" id="about_us">
+
     <div class="d-flex justify-content-start align-items-center">
         <div class="d-flex justify-content-center align-items-center col-md-6">
             <div class="col-md-8">
@@ -17,6 +18,9 @@
 
 <!-- ======== Customer Feature Section Start  ======== -->
 <div class="container-fluid" id="customer-feature-section">
+    <div class="d-flex justify-content-center align-items-center w-100 customer-section-heading">
+        <h1>Online <span>Grocery</span> Home Delivery in <span>Lucknow</span></h1>
+    </div>
     <div class="row">
         <div class="col-md-3  customer-feature">
             <div class="lottie-box">
