@@ -5,7 +5,7 @@
     <p>T&C</p>
     <p>Disclaimer</p>
     <p>Blogs</p>
-    <p>Contact us</p>
+    <p>Career</p>
 </div>
 <!-- =========== Top Navigation End =========== -->
 
@@ -18,7 +18,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto ml-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mx-auto ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
@@ -71,11 +71,6 @@
                         <li><a class="dropdown-item" href="#">Pantryo Delivery Partner</a></li>
                     </ul>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Contact us</a>
-                </li>
-
             </ul>
         </div>
     </div>

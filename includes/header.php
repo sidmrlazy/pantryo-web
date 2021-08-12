@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="assets/style.css">
     <!-- Custom StyleSheet End -->
 
+    <!-- Browser Icon Start -->
+    <link rel="shortcut icon" href="assets/images/logo/browser_icon.png" type="image/x-icon">
+    <!-- Browser Icon End -->
+
     <!-- Lottie Animation Start -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Lottie Animation End -->
