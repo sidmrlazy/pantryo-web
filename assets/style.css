@@ -1,7 +1,11 @@
-/* font-family: 'Fredoka One', cursive;
-font-family: 'Open Sans', sans-serif; */
+/* =================================
+=============== FONTS ==============
+font-family: 'Fredoka One', cursive;
+font-family: 'Open Sans', sans-serif; 
+================================= */
 
-/* ======== Theme Colors ========
+/* 
+======== Theme Colors ========
 #3d3d3d
 #FFFFFF
 #FEF9E5
@@ -10,7 +14,16 @@ font-family: 'Open Sans', sans-serif; */
 #C6B5C7
 #b88cba
 #5E3360 
+======== Theme Colors ========
 */
+
+/* ======= Body Start ======= */
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* ======= Body End ======= */
 
 /* ======= Top Nav Start ======= */
 .top-nav {
@@ -38,12 +51,6 @@ font-family: 'Open Sans', sans-serif; */
 /* ======= Top Nav End ======= */
 
 /* ======= Navigation Start ======= */
-
-* {
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-}
 .main-nav {
   display: none;
 }
@@ -143,17 +150,14 @@ font-family: 'Open Sans', sans-serif; */
   font-size: 20px;
   color: #777;
 }
-
 .banner-captions img {
   width: 30%;
   height: auto;
 }
-
 #banner-icon {
   font-size: 30px !important;
   margin-left: 10px;
 }
-
 #gstore {
   width: 30% !important;
   height: auto;
@@ -168,12 +172,22 @@ font-family: 'Open Sans', sans-serif; */
   -webkit-box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.7);
   border-radius: 8px;
-  padding: 20px;
+  padding: 40px;
+}
+.static-modal-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.static-modal-content h3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+.static-modal-content p {
+  font-size: 12px;
 }
 /* ======= Static Modal End ======= */
 
 /* ======= Customer Animated Text Section Start ======= */
-
 .animated-text-container {
   width: 100%;
   height: 100%;
@@ -188,66 +202,69 @@ font-family: 'Open Sans', sans-serif; */
 }
 
 .changing-content:after {
-  content: "Carving chocolates?";
+  content: "zo-MAA-to ki kasam, Stay home";
   animation: changetext 40000ms infinite linear;
   font-family: "Open Sans", sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bolder;
   color: #fff !important;
   flex: 1;
 }
 .animated-text-container h2 {
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   color: #c6b5c7;
-  margin-top: -10px;
 }
-
 @keyframes changetext {
   0% {
-    content: "Out of Rashan?";
+    content: "Don’t swiggy, Just Ghar ka Khana";
   }
   10% {
-    content: "Lockdown trouble?";
+    content: "zo-MAA-to ki kasam, Stay home";
   }
   20% {
-    content: "Mood for maggi?";
+    content: "Gro-fers is Next Day, PantrYO is Today";
   }
   30% {
-    content: "Out of ingredients?";
+    content: "No Bazar is BIGger than your Yo-Yo ki Dukaan";
   }
   40% {
-    content: "Lockdown trouble?";
+    content: "You don’t need a BIGger Basket, you just need Araam";
   }
   50% {
-    content: "Mood for maggi?";
+    content: "Don’t swiggy, Just Ghar ka Khana";
   }
   60% {
-    content: "Out of Rashan?";
+    content: "zo-MAA-to ki kasam, Stay home";
   }
   70% {
-    content: "Lockdown trouble?";
+    content: "Gro-fers is Next Day, PantrYO is Today";
   }
   80% {
-    content: "Mood for maggi?";
+    content: "No Bazar is BIGger than your Yo-Yo ki Dukaan";
   }
   90% {
-    content: "Out of Rashan?";
+    content: "You don’t need a BIGger Basket, you just need Araam";
   }
   100% {
-    content: "Lockdown trouble?";
+    content: "Don’t swiggy, Just Ghar ka Khana";
   }
 }
-
 .second-section {
   max-width: 80%;
   height: auto;
 }
 .lottie {
-  width: 80%;
+  width: 100%;
+  height: auto;
+  margin-left: -150px;
+  margin-top: -150px;
+  margin-bottom: -150px;
+}
+.animated-text-container img {
+  width: 20%;
   height: auto;
 }
-
 /* ======= Customer Animated Text Section End ======= */
 
 /* ======= Customer Feature Section Start ======= */

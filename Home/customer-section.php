@@ -1,16 +1,15 @@
 <!-- ======== Customer Animated Section Start  ======== -->
-<div class="animated-text-container container-fluid mt-5 pt-5 pb-5" id="about_us">
-
+<div class="animated-text-container container-fluid mt-5" id="about_us">
     <div class="d-flex justify-content-start align-items-center">
-        <div class="d-flex justify-content-center align-items-center col-md-6">
-            <div class="col-md-8">
+        <div class="d-flex justify-content-center align-items-center col-md-8">
+            <div class="col-md-10">
                 <h1 class="changing-content"></h1>
-                <h2>Order groceries now</h2>
+                <h2>Order YOGroceries Online from your nearest Store</h2>
                 <img src="assets/images/icons/gstore.png" />
             </div>
         </div>
         <div class="col-md-4 d-flex justify-content-center align-items-center second-section">
-            <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_bn5winlb.json" background="transparent" speed="1" class="lottie" loop autoplay></lottie-player>
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_USXu1l.json" background="transparent" speed="1" class="lottie" loop autoplay></lottie-player>
         </div>
     </div>
 </div>
@@ -21,7 +20,8 @@
     <div class="d-flex justify-content-center align-items-center w-100 customer-section-heading">
         <h1>Online <span>Grocery</span> Home Delivery in <span>Lucknow</span></h1>
     </div>
-    <div class="row">
+    <?php include 'home/static-modal.php'; ?>
+    <!-- <div class="row">
         <div class="col-md-3  customer-feature">
             <div class="lottie-box">
                 <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_tymfv6lk.json" background="transparent" speed="1" class="lottie-customer" loop autoplay></lottie-player>
@@ -53,6 +53,6 @@
             <h3>Order or Pickup</h3>
             <p>Lorem Ipsum is simply dummy text of the printing </p>
         </div>
-    </div>
+    </div> -->
 </div>
 <!-- ======== Customer Feature Section End  ======== -->
