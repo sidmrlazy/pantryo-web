@@ -1,6 +1,6 @@
 <!-- =========== Top Navigation Start =========== -->
 <div class="top-nav">
-    <p>About us</p>
+    <p>Who we are</p>
     <p>Privacy Policy</p>
     <p>T&C</p>
     <p>Disclaimer</p>
