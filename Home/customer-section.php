@@ -3,8 +3,9 @@
     <div class="d-flex justify-content-start align-items-center">
         <div class="d-flex justify-content-center align-items-center col-md-8">
             <div class="col-md-10">
-                <h1 class="changing-content"></h1>
-                <h2>Order YOGroceries Online from your nearest Store</h2>
+                <h1 id="customer-section-changing-text">zo-MAA-to ki kasam, Stay home</h1>
+                <!-- <h1 class="changing-content"></h1> -->
+                <h2>Order <span>YO</span>Groceries Online from your nearest Store</h2>
                 <img src="assets/images/icons/gstore.png" />
             </div>
         </div>
@@ -21,38 +22,5 @@
         <h1>Online <span>Grocery</span> Home Delivery in <span>Lucknow</span></h1>
     </div>
     <?php include 'home/static-modal.php'; ?>
-    <!-- <div class="row">
-        <div class="col-md-3  customer-feature">
-            <div class="lottie-box">
-                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_tymfv6lk.json" background="transparent" speed="1" class="lottie-customer" loop autoplay></lottie-player>
-            </div>
-            <h3>60 Min Delivery</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing </p>
-        </div>
-
-        <div class="col-md-3  customer-feature">
-            <div class="lottie-box">
-                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_tv9atb4y.json" background="transparent" speed="1" class="lottie-customer" loop autoplay></lottie-player>
-            </div>
-            <h3>Live Order Tracking</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing </p>
-        </div>
-
-        <div class="col-md-3  customer-feature">
-            <div class="lottie-box">
-                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_gukhtqpy.json" background="transparent" speed="1" class="lottie-customer" loop autoplay></lottie-player>
-            </div>
-            <h3>2000+ Products</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing </p>
-        </div>
-
-        <div class="col-md-3  customer-feature">
-            <div class="lottie-box">
-                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_tymfv6lk.json" background="transparent" speed="1" class="lottie-customer" loop autoplay></lottie-player>
-            </div>
-            <h3>Order or Pickup</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing </p>
-        </div>
-    </div> -->
 </div>
 <!-- ======== Customer Feature Section End  ======== -->

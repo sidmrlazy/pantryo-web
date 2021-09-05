@@ -200,56 +200,25 @@ font-family: 'Open Sans', sans-serif;
   height: auto;
   margin-top: 10px;
 }
-
-.changing-content:after {
-  content: "zo-MAA-to ki kasam, Stay home";
-  animation: changetext 40000ms infinite linear;
+#customer-section-changing-text {
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   font-weight: bolder;
   color: #fff !important;
   flex: 1;
 }
+
 .animated-text-container h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: #c6b5c7;
 }
-@keyframes changetext {
-  0% {
-    content: "Don’t swiggy, Just Ghar ka Khana";
-  }
-  10% {
-    content: "zo-MAA-to ki kasam, Stay home";
-  }
-  20% {
-    content: "Gro-fers is Next Day, PantrYO is Today";
-  }
-  30% {
-    content: "No Bazar is BIGger than your Yo-Yo ki Dukaan";
-  }
-  40% {
-    content: "You don’t need a BIGger Basket, you just need Araam";
-  }
-  50% {
-    content: "Don’t swiggy, Just Ghar ka Khana";
-  }
-  60% {
-    content: "zo-MAA-to ki kasam, Stay home";
-  }
-  70% {
-    content: "Gro-fers is Next Day, PantrYO is Today";
-  }
-  80% {
-    content: "No Bazar is BIGger than your Yo-Yo ki Dukaan";
-  }
-  90% {
-    content: "You don’t need a BIGger Basket, you just need Araam";
-  }
-  100% {
-    content: "Don’t swiggy, Just Ghar ka Khana";
-  }
+.animated-text-container span {
+  font-family: "Fredoka One", cursive;
+  font-size: 18px;
+  color: #f4aa79;
 }
+
 .second-section {
   max-width: 80%;
   height: auto;
@@ -312,87 +281,6 @@ font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
 /* ======= Customer Feature Section End ======= */
-
-/* ======= App Section Start ======= */
-.app-section {
-  max-width: 100%;
-  max-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: #c6b5c7; */
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.app-section-card {
-  flex: 1;
-  height: 250px;
-  background: rgb(229, 221, 230);
-  background: linear-gradient(
-    180deg,
-    rgba(229, 221, 230, 1) 0%,
-    rgba(170, 130, 172, 1) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  padding: 20px;
-  border-radius: 20px;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: 10px;
-  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.7);
-  border-bottom-right-radius: 100px;
-}
-.app-section-card h1 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  color: #5e3360;
-  font-size: 24px;
-}
-.app-section-card#green-card {
-  background: rgb(195, 222, 182);
-  background: linear-gradient(
-    180deg,
-    rgba(195, 222, 182, 1) 0%,
-    rgba(143, 196, 131, 1) 100%
-  );
-}
-.app-section-card#orange-card {
-  background: rgb(222, 202, 182);
-  background: linear-gradient(
-    180deg,
-    rgba(222, 202, 182, 1) 0%,
-    rgba(189, 164, 106, 1) 100%
-  );
-}
-/* .app-section {
-  background-color: #fef9e5 !important;
-  padding: 50px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.app-section-content {
-  margin-left: 30px;
-} */
-/* .app-section-mid-content {
-  background-color: #b88cba !important;
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 30px;
-}
-.app-section-mid-content h3 {
-  font-size: 24px !important;
-  font-weight: bold;
-  color: #5e3360;
-}
-.app-section-mid-content p {
-  color: #fff;
-} */
-/* ======= App Section Start ======= */
 
 /* ======= Footer Start ======= */
 .footer {
@@ -497,13 +385,22 @@ font-family: 'Open Sans', sans-serif;
   .second-section {
     display: none !important;
   }
-  .static-modal {
+  /* .static-modal {
     display: none;
-  }
+  } */
   .customer-section-heading h1 {
     text-align: center;
   }
   /* Customer Animated Section Start */
+
+  /* Static Modal End */
+  .static-modal {
+    flex-direction: column !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Static Modal End */
 }
 
 /* ======= Mobile View End ======= */

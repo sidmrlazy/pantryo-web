@@ -1,5 +1,6 @@
 <div class="container static-modal">
     <div class="d-flex justify-content-center align-items-center col-md-12">
+
         <div class="d-flex justify-content-center align-items-center m-3 static-modal-content col-md-4">
             <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_9ycwmgb9.json" background="transparent" speed="1" class="lottie-customer" loop autoplay></lottie-player>
             <div>

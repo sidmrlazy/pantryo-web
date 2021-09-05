@@ -19,6 +19,9 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <!-- Ionicons End -->
 
+<script src="assets/jquery.js"></script>
+
+
 </body>
 
 </html>
