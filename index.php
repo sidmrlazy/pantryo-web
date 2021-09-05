@@ -6,7 +6,4 @@
 <?php include 'home/customer-section.php'; ?>
 <!-- ========== Customer Section End ========== -->
 
-<!-- ========== Partner Section Start ========== -->
-<!-- ========== Partner Section End ========== -->
-
 <?php include 'includes/footer.php'; ?>
