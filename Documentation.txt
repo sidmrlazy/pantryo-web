@@ -1,2 +1,3 @@
+========== FONTS USED ==========
 font-family: 'Fredoka One', cursive;
 font-family: 'Open Sans', sans-serif;
