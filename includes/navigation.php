@@ -30,7 +30,7 @@
 
                         <li class="d-flex justify-content-start align-items-center p-2">
                             <ion-icon name="business-outline" id="nav-icon"></ion-icon>
-                            <a class="dropdown-item" href="#about_us">Who we are</a>
+                            <a class="dropdown-item" href="#about_us">About us</a>
                         </li>
 
                         <li>
