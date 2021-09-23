@@ -8,4 +8,3 @@
 
 <?php include 'includes/footer.php'; ?>
 
-<!-- skdfjklsadjfkljsadlfjskladjflkjsadf -->
