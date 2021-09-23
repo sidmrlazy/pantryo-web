@@ -21,6 +21,6 @@
     <div class="d-flex justify-content-center align-items-center w-100 customer-section-heading">
         <h1>Online <span>Grocery</span> Home Delivery in <span>Lucknow</span></h1>
     </div>
-    <?php include 'home/static-modal.php'; ?>
+    <?php include 'Home/static-modal.php'; ?>
 </div>
 <!-- ======== Customer Feature Section End  ======== -->
