@@ -7,3 +7,5 @@
 <!-- ========== Customer Section ========== -->
 
 <?php include 'includes/footer.php'; ?>
+
+<!-- skdfjklsadjfkljsadlfjskladjflkjsadf -->
