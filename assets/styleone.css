@@ -394,12 +394,20 @@ font-family: 'Open Sans', sans-serif;
   /* Customer Animated Section Start */
 
   /* Static Modal End */
-  .static-modal {
-    flex-direction: column !important;
+  /* .static-modal {
     display: flex !important;
     justify-content: center;
     align-items: center;
+  } */
+  .static-modal-mobile {
+    flex-direction: column !important;
   }
+  #static-modal-lot {
+    width: 100% !important;
+    height: auto !important;
+    margin-left: -50px !important;
+  }
+
   /* Static Modal End */
 }
 
