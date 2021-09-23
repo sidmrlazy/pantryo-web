@@ -2,8 +2,8 @@
 <?php include 'includes/navigation.php'; ?>
 
 <!-- ========== Customer Section ========== -->
-<?php include 'home/mid-banner.php'; ?>
-<?php include 'home/customer-section.php'; ?>
+<?php include 'Home/mid-banner.php'; ?>
+<?php include 'Home/customer-section.php'; ?>
 <!-- ========== Customer Section ========== -->
 
 <?php include 'includes/footer.php'; ?>
