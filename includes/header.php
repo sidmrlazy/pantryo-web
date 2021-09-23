@@ -18,7 +18,7 @@
     <!-- Google Fonts End -->
 
     <!-- Custom StyleSheet Start -->
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/styleone.css">
     <!-- Custom StyleSheet End -->
 
     <!-- Browser Icon Start -->
