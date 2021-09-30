@@ -324,6 +324,14 @@ font-family: 'Open Sans', sans-serif;
 .tnc-content h1 {
   font-weight: 600;
 }
+.tnc-content h2 {
+  font-weight: 600;
+  margin-top: 20px;
+}
+.tnc-content h3 {
+  font-weight: bold;
+  margin-top: 20px;
+}
 .tnc-content p {
   font-weight: 400;
   text-align: justify;
