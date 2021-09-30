@@ -142,4 +142,57 @@
     <!-- ======================= -->
     <h3>16. Violation of the Terms of Use</h3>
     <p>You agree that any violation by You of these Terms of Use will constitute an unlawful and unfair business practice, and will cause irreparable harm to the Company/Client, as the case may be, for which monetary damages would be inadequate, and You consent to the Company/Client obtaining any injunctive or equitable relief that they deem necessary or appropriate in such circumstances. These remedies are in addition to any other remedies that the Company/Client may have at law or in equity. If Company/Client takes any legal action against You as a result of Your violation of these Terms of Use, they will be entitled to recover from You, and You agree to pay, all reasonable attorneys’ fees and costs of such action, in addition to any other relief that may be granted.</p>
+
+    <!-- ======================= -->
+    <h3>17. Additional Terms</h3>
+    <p>a. We may also require You to follow additional rules, guidelines or other conditions in order to participate in certain promotions or activities available through the Platform. These additional terms shall form a part of this Terms of Use, and You agree to comply with them when You participate in those promotions, or otherwise engage in activities governed by such additional terms.</p>
+
+    <!-- ======================= -->
+    <h3>18. Link to Third Parties</h3>
+    <p>a. The Platform may contain links to other sites owned by third parties (i.e. advertisers, affiliate partners, strategic partners, or others). Pantryo shall not be responsible for examining or evaluating such third party websites, and Pantryo does not warrant the products or offerings of, any of these businesses or individuals, or the accuracy of the content of such third party websites. Pantryo does not assume any responsibility or liability for the actions, product, and content of any such third party websites. Before You use/access any such third-party websites, You should review the applicable terms of use and policies for such third party websites. If You decide to access any such linked third party website, You do so at Your own risk.</p>
+
+    <!-- ======================= -->
+    <h3>19. Term and Termination</h3>
+    <p>a. The Terms of Use will continue to apply until terminated by either You or Pantryo as set forth below. If You object to the Terms of Use or are dissatisfied with the Platform, Pantryo Services, Your only recourse is to (i) close Your Account on the Platform by writing to Us at accountdelete@Pantryo.in; and/or (ii) stop accessing the Platform. Pantryo will make Your account dormant upon receipt of request in writing.
+        Pantryo may, in its sole discretion, bar your use of the Pantryo Services at any time, for any or no reason. Even after your account with Pantryo is disabled, dormant or made inactive, the terms agreed by You at the time of registration will remain in effect. This termination shall be effective only once You have cleared all Your dues that You are liable to pay as per the provisions of this Terms of Use.
+    </p>
+    <p>b. The Company may delist You or block Your future access to the Platform or suspend or terminate Your Account if it believes, in its sole and absolute discretion that You have infringed, breached, violated, abused, or unethically manipulated or exploited any term of these Terms of Use or anyway otherwise acted unethically.</p>
+    <p>c. Notwithstanding anything in this clause, these Terms of Use will survive indefinitely unless and until Pantryo chooses to terminate them.</p>
+    <p>d. You hereby agree and acknowledge, upon termination, Pantryo shall have the right to retain all information pertaining to the transactions initiated by You on the Platform.</p>
+
+    <!-- ======================= -->
+    <h3>20. Governing Law</h3>
+    <p>This Terms of Use shall be governed by and constructed in accordance with the laws of India without reference to conflict of laws principles and disputes arising in relation hereto shall be subject to the exclusive jurisdiction of courts, tribunals, fora, applicable authorities at Lucknow.</p>
+
+    <!-- ======================= -->
+    <h3>21. Report Abuse</h3>
+    <p>In the event You come across any abuse or violation of these Terms of Use or if You become aware of any objectionable content on the Platform, please report the same to the following e-mail id: support.pantryo@gmail.com In case You have any queries with respect to the Terms or the Pantryo Services, please write to Us at support.pantryo@gmail.com</p>
+
+    <!-- ======================= -->
+    <h3>22. Communications</h3>
+    <p>You hereby expressly agree to receive communications by way of SMSs and/or e-mails and/or Whatsapp from Pantryo, or other third parties. You can unsubscribe/ opt-out from receiving communications through SMS, Whatsapp and email anytime by contacting us for the same. However, You may still receive communications from Your end with respect to Your use of the Pantryo Service.</p>
+
+    <!-- ======================= -->
+    <h3>23. General</h3>
+    <p>a. Amendments: Pantryo reserves the unconditional right to modify or amend this Terms of Use without any requirement to notify You of the same. You can determine when this Terms of Use was last modified by referring to the "Last Updated" legend above. It shall be Your responsibility to check this Terms of Use periodically for changes. Your acceptance of the amended Terms of Use shall signify Your consent to such changes and agreement to be legally bound by the same.</p>
+    <p>b. Notice: All notices from Pantryo will be served by email to Your registered email address or by general notification on the Platform.</p>
+    <p>c. Assignment: You cannot assign or otherwise transfer the Terms of Use, or any rights granted hereunder to any third party. Pantryo’s rights under the Terms of Use are freely transferable by Pantryo to any third party without the requirement of informing You or seeking Your consent.</p>
+    <p>d. Severability: If, for any reason, a court of competent jurisdiction finds any provision of the Terms of Use, or any portion thereof, to be unenforceable, that provision shall be enforced to the maximum extent permissible so as to give effect to the intent of the parties as reflected by that provision, and the remainder of the Terms of Use shall continue in full force and effect.</p>
+    <p>e. Waiver: Any failure by Pantryo to enforce or exercise any provision of the Terms of Use, or any related right, shall not constitute a waiver by Pantryo of that provision or right.</p>
+    <p>f. Integration: These Terms of Use together with Pantryo’s Privacy Policy and any other legal notices, communications published by Pantryo on its Platform, and any other agreements executed between You and Pantryo shall constitute the entire agreement between you and Pantryo concerning its Platform, Pantryo Services and governs Your use of the Platform and Pantryo Service, superseding any prior agreements between You and Pantryo with respect to the Platform and Pantryo Service</p>
+    <p>g. IP Infringement If You believe the Platform violates Your intellectual property, You must promptly notify Pantryo in writing at [legalnotices@Pantryo.in These notifications should only be submitted by the owner of the intellectual property or an agent duly authorized to act on his/her behalf. However, any false claim by You may result in the termination of Your access to the Platform. You are required to provide the following details in Your notice:</p>
+    <ol>
+        <li>the intellectual property that You believe is being infringed;</li>
+        <li>the item that You think is infringing and include sufficient information about where the material is located on the Platform;</li>
+        <li>a statement that You believe in good faith that the item You have identified as infringing is not authorized by the intellectual property owner, its agent, or the law to be used in connection with the Platform;</li>
+        <li>Your contact details, such as Your address, telephone number, and/or email;</li>
+        <li>a statement that the information You provided in Your notice is accurate, and that You are the intellectual property owner or an agent authorized to act on behalf of the intellectual property owner whose intellectual property is being infringed; and</li>
+        <li>Your physical or electronic signature.</li>
+    </ol>
+
+    <!-- ========================================================================================================================================== -->
+    <h1>Pantryo Partner Terms</h1>
+    <p>These terms of use (“Terms of Use”) describe the terms on which the delivery partners(“You” or “Your” or “Yourself” or “Delivery Partner”)nterested in registering or availing Pantryo Services (defined below) and accessing the platform www.pantryo.in and the mobile application ”Pantryo Partner” owned and operated by Gizmmo Alchemy(“Pantryo”) and licensed for use on a revocable, non-exclusive, temporary, non-assignable basis to You,collectively referred to as, the “Platform”, connect with the users registered on the Platform (“Users”) and the merchants registered on the Platform (“Pantryo Shop”) to provide Your transportation, delivery and logistics services to them, as may initiated by them on the Platform.</p>
+    <p class="fw-bold">PLEASE READ THE TERMS OF USE CAREFULLY BEFORE USING OR REGISTERING ON THE PLATFORM OR AVAILING THE PANTRYO SERVICES OR ACCESSING/USING ANY MATERIAL, INFORMATION THROUGH THE PLATFORM. YOUR USE OF THE PLATFORM OR PANTRYO SERVICES SHALL SIGNIFY YOUR ACCEPTANCE OF THE TERMS OF USE AND YOUR AGREEMENT TO BELEGALLY BOUND BY THE SAME.</p>
+
 </div>
