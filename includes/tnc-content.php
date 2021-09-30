@@ -353,6 +353,71 @@
     <h3>22. Violation of the Terms of Use</h3>
     <p>a. You also agree that any violation by You of these Terms of Use will constitute an unlawful and unfair business practice, and will cause irreparable harm to Pantryo, for which monetary damages would be inadequate, and You consent to Pantryo obtaining any injunctive or equitable relief that Pantryo may deems necessary or appropriate in such circumstances. These remedies are in addition to any other remedies that Pantryo may have at law or in equity.</p>
     <p>b. If Pantryo does take any legal action against You as a result of Your violation of these Terms of Use, Pantryo will be entitled to recover from You, and You agree to pay, all reasonable attorneys’ fees and costs of such action, in addition to any other relief granted to Pantryo.</p>
+
+    <!-- ======================= -->
+    <h3>23. Relationship of the Parties</h3>
+    <p>Except as otherwise expressly provided herein to the relationship between Pantryo and Delivery Partner is solely that of independent contractors. The parties expressly agree that: (i) these Terms of Use do not create any relationship of employment with Pantryo nor does it impose any employer obligations on Pantryo (inter alia including obligations under labour laws and tax laws); and (ii) no joint venture, partnership, or principal-agent relationship exists between Pantryo and Delivery Partner(s). However, for the limited sole purpose of collection of DP Fees, Ride Cost, Fare etc., Pantryo may be engaging with third parties’ services on behalf of Delivery Partner, for collecting payments from Users on behalf of the Delivery Partner.</p>
+
+    <!-- ======================= -->
+    <h3>24. Miscellaneous Terms</h3>
+    <p>a. Modification. Pantryo reserves the right to modify these Terms of Use, effective upon publishing an updated version on the Platform. Pantryo shall not be required to notify You of any changes made to the Terms of Use. You are requested to regularly visit the homepage to view the most current Terms of Use. You can determine when Pantryo last modified the Terms of Use by referring to the “Last Updated” legend above. It shall be Your responsibility to check these Terms of Use periodically for changes. Pantryo may require You to provide Your consent to the updated Terms of Use in a specified manner prior to any further use of the Platform. If no such separate consent is sought, Your continued use of the Pantryo Services, or the Platform will constitute Your acceptance of those changes.</p>
+    <p>b. Supplemental Terms. Supplemental terms may apply to Your use of the Platform or the Pantryo Services, such as use policies or terms related to certain features and functionality and/or zero tolerance/shipping policies, which may be modified by Pantryo from time to time (“Supplemental Terms”). You may be presented with certain Supplemental Terms from time to time. Supplemental Terms are in addition to, and shall be deemed a part of, these Term of Use. Supplemental Terms shall prevail over these Terms of Use in the event of a conflict.</p>
+    <p>c. Severability. If any provision of these Terms of Use is held to be illegal, invalid or unenforceable, in whole or in part, under any law, such provision or part thereof shall to that extent be deemed not to form part of this Terms of Use but the legality, validity and enforceability of the remainder of this Agree shall not be affected. In that event, the parties shall replace the illegal, invalid or unenforceable (part of the) provision with a(part of a) provision that is legal, valid and enforceable and that has, to the greatest extent possible, a similar effect as the illegal, invalid or unenforceable (part of the)provision, given the contents and purpose of these Terms of Use.</p>
+    <p>d. Assignment. You shall not assign or transfer these Terms of Use or any of its rights or obligations hereunder, in whole or in part, without the prior written consent of Pantryo. Pantryo may assign or transfer any or all of its rights or obligations hereunder, in whole or in part, under these Terms from time to time without consent</p>
+    <p>e. Notices. Any notice delivered by Pantryo to You under these Terms of Use will be deliveredby email to the email address associated with Your Account or by posting the same on the Platform. Any notice delivered by You to Pantryo under these Terms of Use will be delivered by contacting Pantryo on legal.pantryo@gmail.com and/or its support representatives.</p>
+    <p>f. Governing Law; Arbitration. This Terms of Use shall be governed exclusively by laws of India and the Parties expressly submit to the exclusive jurisdiction of the courts of Lucknow. In the event of any dispute, claim or controversy arising under, or in relationto, this Terms of Use (“Dispute”), such Dispute shall be resolved by arbitration inaccordance with the Arbitration and Conciliation Act, 1996. The Dispute shall be settled by a sole arbitrator, solely appointed by Pantryo pursuant to the provisions of the Arbitration and Conciliation Act, 1996. The seat of arbitration shall be Lucknow, India and the arbitration proceedings shall be governed by the provisions of the Arbitration and Conciliation Act, 1996, as amended from time to time. All arbitration proceedings shall be conducted in English. The arbitration award shall be final and binding on the Parties and shall be enforceable in any competent court of law, and the Parties agree to be bound thereby and to act accordingly.</p>
+
+    <!-- ======================= -->
+    <h1>Pantryo Shop Terms</h1>
+    <h2>Partner Terms of use</h2>
+    <p>The Pantryo Master Framework Letter (“Letter”) along with the Merchant Partner Terms of Use (“Terms”), represents and confirms our mutual Terms with respect to the Merchant Partner’s participation on the proprietary mobile platform currently made available by Gizmmo Alchemy(“Pantryo” or “us”) or its affiliates, from time-to-time, and referred to as the “Pantryo App”. Upon signing by both parties, the Letter and the Pantryo Merchant Terms of Use binding and enforceable legal contract between you and Pantryo as of the date set forth above (“Effective Date”)
+        The Terms with you are as follows:
+    </p>
+
+    <!-- ======================= -->
+    <h3>1. Structure of Terms</h3>
+    <p>Our Terms shall consist of this Letter, together with the addenda (individually, an “Addendum”) addressing areas of collaboration agreed to by both of us (this Letter and any and all such Addenda are collectively the “Terms”). In connection with each Addendum, we will designate those actions, responsibilities and services to be respectively provided by each of us. In the event of a conflict, the terms contained in an Addendum will supersede conflicting terms contained in these Terms.</p>
+
+    <!-- ======================= -->
+    <h3>2. Intended Projects</h3>
+    <p>We each agree to work in good faith with one another on certain collaborative projects, (as described below) or other projects as we mutually agree, in connection with the item(s), which include medicines, cosmetics, other licensed drugs and health products made available [each an “Item(s)”] via the Pantryo App. Each project will be further specified in an Addendum, and any such project will only be undertaken once we mutually execute such Addendum.</p>
+
+    <!-- ======================= -->
+    <h3>3.</h3>
+    <p>The suggested search term(s) or Merchant item(s) visible on the Pantryo App is the general availability of Item(s) during the Merchant’s normal business hours. The Merchant’s customers (the “Buyers” and/or “Pantryo App Users”/” User(s)”) may select Item(s) from the displayed search term(s)/listing(s) on the Pantryo App.</p>
+
+    <!-- ======================= -->
+    <h3>4. Delivery</h3>
+    <p>The “Pantryo Web Dashboard” will be made available to the Merchant to access on-demand logistic services by Delivery Partners. For the sake of clarity, neither Pantryo nor its affiliates provide any delivery or logistics services, but Pantryo provides a platform for outlets like yours to connect with Delivery Partners for delivery services and to receive demand prediction, payment processing and related information services in connection with the sale of the Items. “Delivery Partner” is defined as an independent contractor who intends to provide on demand delivery services using Pantryo’s proprietary technology platform under license from Pantryo or one of its affiliates. Pantryo will not have any obligation to deliver the Item(s) as a platform provider. For purposes of delivery of the Items, Pantryo and the Delivery Partners shall operate (i) under cover of any approval, license or permission required to operate your business at the Merchant Outlet and sell the Item(s) and (ii) under your control, as your agent (including but not limited to receipt agent of Item charges and based on your instructions, if applicable, apply the Item charges collected on your behalf towards disbursal of the fee payable by you to Delivery Partner), and not employee. For the sake of clarity, you, through the services provided by Delivery Partners, are responsible for the delivery of Items and you maintain possession, control and care of the Items at all times. You shall have marketable legal right and title to sell the products or render the services. You shall not offer any products or services which are illegal, unlawful, expired and in violation of applicable laws and policies. Pantryo will not be liable for any damage or loss incurred by the Users in relation to the delivery of the Items and will follow reasonable guidance you provide regarding the delivery of the Items.</p>
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
     <!-- ======================= -->
 
 
