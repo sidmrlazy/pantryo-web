@@ -40,4 +40,18 @@
     <p>o. You hereby acknowledge that if You have any complaint with respect to the Pantryo Services, You will first inform Pantryo in writing within 24 (twenty four) hours of using such Pantryo Services</p>
 
     <h3>3. User Information</h3>
+    <p>a. You are solely responsible for and in control of the information You provide to us. Compilation of User Accounts and User Account bearing contact number and e-mail addresses are owned by Pantryo. Further, You understand and agree that certain information will be case sensitive and must be handled with a prudent care.</p>
+    <p>b. In the case where the Platform is unable to establish unique identity of the User against a valid mobile number or e-mail address, the Account shall be indefinitely suspended. Pantryo reserves the full discretion to suspend a User's Account in the above event and does not have the liability to share any Account information whatsoever.</p>
+
+    <h3>4. Payment Terms</h3>
+    <p>a. Delivery Services: While availing Delivery Service, You shall pay the purchase price of the Item through the Platform. Only upon processing such agreed amount via Platform, shall the Delivery Partner deliver the Item on Your behalf.</p>
+    <p>b. Service Fees: With respect to Delivery Services and Purchase Services, You will be charged a separate service fees ("Pantryo Comfort Fee"). The Service Fees shall be included in the bill generated.</p>
+    <p>c. You agree that Pantryo may use certain third-party vendors and service providers, including payment gateways, to process the payments made by You on the Platform.</p>
+
+    <h3>5. Rating</h3>
+    <p>a. You agree that: (i) after completion of a transaction on the Platform, the Platform will prompt the User with an option to provide a rating and comments about the Delivery Partner (with respect to the services performed by the Delivery Partner) and Merchants (with respect to the Items sold by them); and (ii) the Delivery Partner and the Tied-Up Merchants may also be prompted to rate You on the Platform. Based upon such Delivery Partner and Merchant ratings, Your rating score on the Platform will be determined and displayed.</p>
+    <p>b. Pantryo and its affiliates reserve the right to use, share and display such ratings and comments in any manner in connection with the business of Pantryo and its affiliates without attribution to or approval of Users and You hereby consent to the same. Pantryo and its affiliates reserve the right to edit or remove comments in the event that such comments include obscenities or other objectionable content, include an individual’s name or other personal information, or violate any privacy laws, other applicable laws or Pantryo’s or its affiliates’ content policies.</p>
+    <p>c. Location: You acknowledge and agree that Your geo-location information is required for You to avail the Pantryo Services and initiate transactions on the Platform. You acknowledge and hereby consent to the monitoring and tracking of Your geo-location information. In addition, Pantryo may share Your geo-location information with Delivery Partners and Merchants (as the case maybe).</p>
+
+    <h2>PART B - SPECIFIC TERMS FOR PANTRYO SERVICES</h2>
 </div>
