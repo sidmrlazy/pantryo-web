@@ -218,4 +218,34 @@
     <p>d. Pantryo shall have the right to display the information provided by You on the Platform. You shall ensure that all the information provided by You is sufficient to give a clear description of Yourself and the DP Services performed by You for the Users, and is not false or misleading in any manner. Pantryo does not independently verify the information. Pantryo shall in no way be responsible or liable for the accuracy or completeness of any information provided by You.</p>
     <p>e. Registration Fee. Pantryo may charge a non-refundable on boarding fee at the time of registration on the platform.</p>
 
+    <!-- ======================= -->
+    <h3>3. Pantryo Services</h3>
+    <p>The Platform provides you with the following services (“Pantryo Services”)-</p>
+    <ul>
+        <li>License to the Platform;</li>
+        <li>Where authorized, collection of your fee for DP Services.</li>
+        <li>It may facilitate the issuance of invoice/payment statement to the Users, on Your behalf</li>
+    </ul>
+
+    <!-- ======================= -->
+    <h3>4. Provision of DP Services.</h3>
+    <p>a. When You are logged into Your Account on the Platform, Users’ requests for DP Services may appear to You on Your Account on the Platform if You are available and visible in the vicinity of the task raised by the User. You have the choice to accept the request from the User. If you accept the User request for DP Services, You will receive in an automated manner certain user information which may inter alia include the pick-up address, User’s name, item to be purchased, purchase location, pick-up/drop off location, contact information etc. (“User Information”).</p>
+    <p>b. You hereby acknowledge and agree that once You have accepted a User’s request for DP Services, the Platform may display to the User in an automated manner, certain information about You which may inter alia include Your name, contact information, photo and location, Your rating, Your driving license information and Your vehicle registration number and other personal information necessary for the successful and timely accomplishment of the DP Services.</p>
+    <p>c. You agree and undertake that You shall not contact Users or use any User’s personal data/User Information for any reason other than for the purposes of fulfilling DP Services through the Platform in accordance with these Term of Use and applicable law.</p>
+    <p>d. You shall provide valid invoices issued by Merchants to the User for the Items covered under DP Services (especially Delivery Services) performed by You,(as may be applicable). For Your services, the Platform generates an automated service receipt/ Payment Statement/ Invoice as the case maybe, on Your behalf to the User.</p>
+    <p>e. You shall transport all Items for the Users and provide all DP Services to the User directly to their specified destination or otherwise complete all logistics related tasks, as directed by the applicable User, without undue delay. In the event, You, at your own discretion feel that there will be an inordinate delay, You shall on a best efforts basis try and reach out to the User.</p>
+    <p>f. With respect to DP Services, You hereby agree that You shall not open or attempt to open the Items/packages to be dropped off/delivered to or on behalf of the User. However, if it comes to Your knowledge that a package contains illegal substance or Items not permissible to be delivered through the DP Services, You shall immediately report the same concerned law enforcement authorities. You expressly agree that You will not deliver/transport any alcoholic beverages or entertain any User’s request to deliver/purchase or transport any alcoholic beverages or any other contraband items.</p>
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+    <!-- ======================= -->
+
+
 </div>
