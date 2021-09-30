@@ -48,6 +48,9 @@ font-family: 'Open Sans', sans-serif;
   transition: 0.2s ease-in-out;
   font-size: 14px;
 }
+.top-nav a {
+  text-decoration: none !important;
+}
 /* ======= Top Nav End ======= */
 
 /* ======= Navigation Start ======= */
@@ -304,8 +307,28 @@ font-family: 'Open Sans', sans-serif;
   font-weight: 300 !important;
   text-align: left;
 }
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
 
 /* ======= Footer End ======= */
+
+/* ======= TNC Start ======= */
+.tnc-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.tnc-content h1 {
+  font-weight: 600;
+}
+.tnc-content p {
+  font-weight: 400;
+  text-align: justify;
+}
+/* ======= TNC End ======= */
 
 /* ======= Mobile View Start ======= */
 

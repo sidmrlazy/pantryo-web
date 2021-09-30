@@ -2,7 +2,9 @@
 <div class="top-nav">
     <p>Who we are</p>
     <p>Privacy Policy</p>
-    <p>T&C</p>
+    <a href="tnc.php">
+        <p>T&C</p>
+    </a>
     <p>Disclaimer</p>
     <p>Blogs</p>
     <p>Career</p>
@@ -20,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mx-auto ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="main-nav nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

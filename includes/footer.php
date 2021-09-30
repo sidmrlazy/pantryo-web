@@ -1,6 +1,8 @@
 <div class="footer">
     <div class="col-md-3 footer-parts">
-        <p>Home</p>
+        <a href="index.php">
+            <p>Home</p>
+        </a>
         <p>About us</p>
         <p>Services</p>
         <p>Contact us</p>
@@ -8,7 +10,9 @@
 
     <div class="col-md-3 footer-parts">
         <p>Privacy Policy</p>
-        <p>Terms & Conditions</p>
+        <a href="tnc.php">
+            <p>Terms & Conditions</p>
+        </a>
         <p>Disclaimer</p>
         <p>Blogs</p>
     </div>

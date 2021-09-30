@@ -1,0 +1,7 @@
+<div class="container mt-5 tnc-content">
+    <h1>User Terms & Conditions</h1>
+    <p>These terms of use ("Terms of Use") mandate the terms on which users ("You" or "Your" or "Yourself" or "Users") interested in browsing or availing Pantryo Services (defined below), and accessing the platform www.pantryo.in and the mobile application owned and operated by Gizmmo Alchemy(“Pantryo”) collectively referred to as, the "Platform" connects with the merchants registered on the Platform ("Tied-up Merchants"), merchants not registered on the Platform ("Non- Merchants") (together hereinafter referred to as "Merchants") and with delivery partners ("Delivery Partners") to avail the Pantryo Services.
+        Please read the Terms of Use carefully before using the Platform or registering on the Platform or accessing any material or information through the Platform. By clicking on the "I Accept" button, You accept this Terms of Use and agree to be legally bound by the same.
+        Use of and access to the Platform is offered to You upon the condition of acceptance of all the terms, conditions and notices contained in this Terms of Use and Privacy Policy, along with any amendments made by Pantryo at its sole discretion and posted on the Platform from time to time.
+    </p>
+</div>
