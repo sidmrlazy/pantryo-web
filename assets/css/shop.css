@@ -1,3 +1,9 @@
+/* =================================
+=============== FONTS ==============
+font-family: 'Fredoka One', cursive;
+font-family: 'Open Sans', sans-serif; 
+================================= */
+
 #shop-section-changing-text {
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
@@ -42,6 +48,7 @@
 } */
 .shop-section-heading h1 {
   text-align: center;
+  width: 70% !important;
 }
 .lottie-shop {
   width: 100% !important;
@@ -62,4 +69,10 @@
 .shop-details p {
   margin-top: 20px;
   font-size: 20px;
+}
+.shop-details-mid-section {
+  margin-top: 20px;
+}
+.shop-details-mid-section h2 {
+  font-family: "Fredoka One", cursive;
 }

@@ -18,9 +18,9 @@
 
 <!-- ======== Shop Feature Section Start  ======== -->
 <div class="container-fluid" id="shop-feature-section">
-    <!-- <div class="d-flex justify-content-center align-items-center w-100 shop-section-heading">
-        <h1>Online <span>Grocery</span> Home Delivery in <span>Lucknow</span></h1>
-    </div> -->
+    <div class="d-flex justify-content-center align-items-center w-100 shop-section-heading">
+        <h1>Download <span>PantrYo Shop</span> App and make your shop an <span>Online Grocery Shop!</span></h1>
+    </div>
     <?php include 'Shop/shop-static-modal.php'; ?>
 </div>
 <!-- ======== Shop Feature Section End  ======== -->
