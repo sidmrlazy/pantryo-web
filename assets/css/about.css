@@ -12,9 +12,21 @@ font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   margin-top: 20px;
 }
-
 .about-section h4 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   margin-top: 40px;
+}
+.about-section p {
+  font-family: "Open Sans", sans-serif;
+  text-align: justify !important;
+  font-size: 18px;
+}
+.about-section span {
+  font-weight: bold;
+}
+.about-section a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
 }

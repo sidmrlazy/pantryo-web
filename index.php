@@ -6,4 +6,9 @@
 <?php include 'Home/customer-section.php'; ?>
 <!-- ========== Customer Section ========== -->
 
+<!-- ========== Shop Section ========== -->
+<?php include 'Shop/shop-banner.php'; ?>
+<?php include 'Shop/shop-section.php'; ?>
+<!-- ========== Shop Section ========== -->
+
 <?php include 'includes/footer.php'; ?>

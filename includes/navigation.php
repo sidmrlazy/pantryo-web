@@ -1,8 +1,5 @@
 <!-- =========== Top Navigation Start =========== -->
 <div class="top-nav">
-    <a href="about.php">
-        <p>Who we are</p>
-    </a>
     <p>Privacy Policy</p>
     <a href="tnc.php">
         <p>T&C</p>
@@ -25,6 +22,12 @@
             <ul class="navbar-nav me-auto mx-auto ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="about.php">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Contact</a>
                 </li>
                 <li class="main-nav nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -63,7 +66,7 @@
 
                 </li>
 
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Register
                     </a>
@@ -74,7 +77,7 @@
                         </li>
                         <li><a class="dropdown-item" href="#">Pantryo Delivery Partner</a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

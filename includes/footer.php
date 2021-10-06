@@ -26,6 +26,7 @@
 <!-- Ionicons End -->
 
 <script src="assets/jqueryone.js"></script>
+<script src="assets/shopquery.js"></script>
 
 
 </body>
