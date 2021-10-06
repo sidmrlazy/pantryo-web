@@ -5,3 +5,55 @@
   color: #fff !important;
   flex: 1;
 }
+.animated-text-container-shop {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #bf6228 !important;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+  flex-direction: column !important;
+}
+.animated-text-container-shop h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+.animated-text-container-shop span {
+  font-family: "Fredoka One", cursive;
+  font-size: 18px;
+  color: #f4aa79;
+}
+.animated-text-container-shop img {
+  width: 30% !important;
+  height: auto;
+  margin-top: 10px;
+}
+.second-section-shop {
+  display: none !important;
+}
+#shop-feature-section {
+  /* background-color: #e6af88; */
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+/* .static-modal {
+  display: none;
+} */
+.shop-section-heading h1 {
+  text-align: center;
+}
+.lottie-shop {
+  width: 100%;
+  height: auto;
+  margin-left: -150px;
+  margin-top: -150px;
+  margin-bottom: -150px;
+}
+.shop-section-heading h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.shop-section-heading span {
+  color: #5e3360 !important;
+}
