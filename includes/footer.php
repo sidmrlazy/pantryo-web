@@ -3,7 +3,9 @@
         <a href="index.php">
             <p>Home</p>
         </a>
-        <p>About us</p>
+        <a href="about.php">
+            <p>About us</p>
+        </a>
         <p>Services</p>
         <p>Contact us</p>
     </div>

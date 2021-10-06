@@ -1,0 +1,20 @@
+/* =================================
+=============== FONTS ==============
+font-family: 'Fredoka One', cursive;
+font-family: 'Open Sans', sans-serif; 
+================================= */
+
+.about-section {
+  margin-top: 40px !important;
+}
+.about-section h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.about-section h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 40px;
+}
