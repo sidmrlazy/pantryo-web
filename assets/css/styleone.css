@@ -345,8 +345,11 @@ font-family: 'Open Sans', sans-serif;
     display: initial;
   }
   .top-nav {
-    display: none;
+    display: none !important;
   } /* Navigation Start */
+  #about-nav {
+    display: none;
+  }
   .navbar {
     background-color: #fff !important;
   }

@@ -34,7 +34,7 @@
           <a class="nav-link" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="about.php">About us</a>
+          <a id="about-nav" class="nav-link" aria-current="page" href="about.php">About us</a>
         </li>
         <!-- <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">Contact</a>
@@ -61,21 +61,21 @@
             </li>
             <li class="d-flex justify-content-start align-items-center p-2">
               <ion-icon name="document-text-outline" id="nav-icon"></ion-icon>
-              <a class="dropdown-item" href="#">Terms & Conditions</a>
+              <a class="dropdown-item" href="tnc.php">Terms & Conditions</a>
             </li>
-            <li>
+            <!-- <li>
               <hr class="dropdown-divider" />
             </li>
             <li class="d-flex justify-content-start align-items-center p-2">
               <ion-icon name="finger-print-outline" id="nav-icon"></ion-icon>
               <a class="dropdown-item" href="#">Privacy Policy</a>
-            </li>
+            </li> -->
             <li>
               <hr class="dropdown-divider" />
             </li>
             <li class="d-flex justify-content-start align-items-center p-2">
-              <ion-icon name="clipboard-outline" id="nav-icon"></ion-icon>
-              <a class="dropdown-item" href="#">Disclaimer</a>
+              <ion-icon name="call-outline" id="nav-icon"></ion-icon>
+              <a class="dropdown-item" href="contact.php">Contact</a>
             </li>
           </ul>
         </li>
