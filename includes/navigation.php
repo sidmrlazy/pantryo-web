@@ -1,6 +1,9 @@
 <!-- =========== Top Navigation Start =========== -->
 <div class="top-nav">
-  <p>Privacy Policy</p>
+  <!-- <p>Privacy Policy</p> -->
+  <a href="privacy-policy.php">
+    <p>Privacy Policy</p>
+  </a>
   <a href="tnc.php">
     <p>T&C</p>
   </a>
@@ -78,14 +81,14 @@
             </li>
             <!-- =========================================================== -->
 
-            <!-- =========================================================== -->
-            <!-- <li>
-              <hr class="dropdown-divider" />
-            </li>
+            <!-- =========================================================== -->            
             <li class="d-flex justify-content-start align-items-center p-2">
               <ion-icon name="finger-print-outline" id="nav-icon"></ion-icon>
-              <a class="dropdown-item" href="#">Privacy Policy</a>
-            </li> -->
+              <a class="dropdown-item" href="privacy-policy.php">Privacy Policy</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
             <!-- =========================================================== -->
             
             <!-- =========================================================== -->

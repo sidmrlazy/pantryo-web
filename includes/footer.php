@@ -13,7 +13,7 @@
     </div>
 
     <div class="col-md-3 footer-parts">
-    <a href="#">
+    <a href="privacy-policy.php">
             <p>Privacy Policy</p>
         </a>
         
