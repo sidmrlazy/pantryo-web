@@ -1,5 +1,5 @@
 <!-- ======== Shop Animated Section Start  ======== -->
-<div class="animated-text-container-shop container-fluid mt-5" id="about_us">
+<div id="yoshops" class="animated-text-container-shop container-fluid mt-5" id="about_us">
   <div class="d-flex justify-content-start align-items-center">
     <div class="d-flex justify-content-center align-items-center col-md-8">
       <div class="col-md-10">
