@@ -6,17 +6,22 @@
         <a href="about.php">
             <p>About us</p>
         </a>
-        <p>Services</p>
-        <p>Contact us</p>
+        <!-- <p>Services</p> -->
+        <a href="contact.php">
+            <p>Contact</p>
+        </a>
     </div>
 
     <div class="col-md-3 footer-parts">
-        <p>Privacy Policy</p>
+    <a href="#">
+            <p>Privacy Policy</p>
+        </a>
+        
         <a href="tnc.php">
             <p>Terms & Conditions</p>
         </a>
-        <p>Disclaimer</p>
-        <p>Blogs</p>
+        <!-- <p>Disclaimer</p>
+        <p>Blogs</p> -->
     </div>
 </div>
 

@@ -445,8 +445,40 @@ font-family: 'Open Sans', sans-serif;
     height: auto !important;
     margin-left: -50px !important;
   }
-
   /* Static Modal End */
+
+  /* ======= Footer Start ======= */
+  .footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3d3d3d;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px !important;
+    padding: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column !important;
+  }
+  .footer-parts {
+    padding-bottom: 30px;
+  }
+  .footer-parts p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300 !important;
+    text-align: left;
+  }
+  .footer a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* ======= Footer End ======= */
 }
 
 /* ======= Mobile View End ======= */
