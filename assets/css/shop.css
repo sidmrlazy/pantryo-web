@@ -28,8 +28,9 @@
   height: auto;
   margin-top: 10px;
 }
-.second-section-shop {
-  display: none !important;
+.second-section-for-shop {
+  max-width: 80%;
+  height: auto;
 }
 #shop-feature-section {
   /* background-color: #e6af88; */
@@ -43,10 +44,10 @@
   text-align: center;
 }
 .lottie-shop {
-  width: 100%;
+  width: 100% !important;
   height: auto;
   margin-left: -150px;
-  margin-top: -150px;
+  margin-top: -102px;
   margin-bottom: -150px;
 }
 .shop-section-heading h1 {
@@ -56,4 +57,9 @@
 }
 .shop-section-heading span {
   color: #5e3360 !important;
+}
+
+.shop-details p {
+  margin-top: 20px;
+  font-size: 20px;
 }

@@ -6,11 +6,11 @@
                 <h1 id="shop-section-changing-text">Apki Dukaan, Aapki Kamai</h1>
                 <!-- <h1 class="changing-content"></h1> -->
                 <h2>Become a registered <span>Yo</span> Store and start selling online. </h2>
-                <img src="assets/images/icons/gstore.png" />
+                <a href="https://play.google.com/store/apps/details?id=com.pantryopartner" target="_blank"><img src="assets/images/icons/gstore.png" /></a>
             </div>
         </div>
-        <div class="col-md-4 d-flex justify-content-center align-items-center second-section-shop">
-            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_USXu1l.json" background="transparent" speed="1" class="lottie-shop" loop autoplay></lottie-player>
+        <div class="col-md-4 d-flex justify-content-center align-items-center second-section-for-shop">
+            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_dW4EWA.json" background="transparent" speed="1" class="lottie-shop" loop autoplay></lottie-player>
         </div>
     </div>
 </div>
