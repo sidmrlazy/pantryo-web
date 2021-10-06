@@ -2,7 +2,6 @@
     <div class="about-section">
 
         <h2>Pantry (pæntri)</h2>
-
         <h4>Word origin</h4>
         <p>C13: via Anglo-Norman, from Old French paneterie store for bread, ultimately from Latin pānis bread. </p>
 
