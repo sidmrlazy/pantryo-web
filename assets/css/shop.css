@@ -76,3 +76,51 @@ font-family: 'Open Sans', sans-serif;
 .shop-details-mid-section h2 {
   font-family: "Fredoka One", cursive;
 }
+/* ======= Banner Section Start ======= */
+.shop-banner-captions {
+  margin-left: 20px;
+}
+.shop-banner-captions img {
+  width: 20% !important;
+  height: auto;
+}
+.shop-banner-captions span {
+  color: #f4aa79 !important;
+  font-family: "Fredoka One", cursive;
+}
+.mid-banner-lottie {
+  width: 450px;
+  height: 450px;
+}
+.shop-banner-captions h1 {
+  font-family: "Fredoka One", cursive;
+  color: #5e3360;
+  font-size: 64px !important;
+}
+.shop-banner-captions p {
+  font-size: 20px;
+  color: #777;
+}
+.shop-banner-captions img {
+  width: 30%;
+  height: auto;
+}
+#banner-icon {
+  font-size: 30px !important;
+  margin-left: 10px;
+}
+#gstore {
+  width: 30% !important;
+  height: auto;
+}
+/* ======= Banner Section End ======= */
+
+/* ==================================================================== */
+@media only screen and (max-width: 600px) {
+  .shop-mobile-view {
+    display: none;
+  }
+  #shop-lottie {
+    display: none;
+  }
+}

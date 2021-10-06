@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/styleone.css">
     <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="assets/css/delivery-partner.css">
     <!-- Custom StyleSheet End -->
 
     <!-- Browser Icon Start -->

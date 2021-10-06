@@ -27,6 +27,7 @@
 
 <script src="assets/jqueryone.js"></script>
 <script src="assets/shopquery.js"></script>
+<script src="assets/deliverypartnerquery.js"></script>
 
 
 </body>
