@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-start align-items-center">
         <div class="d-flex justify-content-center align-items-center col-md-8">
             <div class="col-md-10">
-                <h1 id="customer-section-changing-text">zo-MAA-to ki kasam, Stay home</h1>
+                <h1 id="customer-section-changing-text">zo-MAA-to ki kasam,<br> Stay home</h1>
                 <!-- <h1 class="changing-content"></h1> -->
                 <h2>Order <span>YO</span>Groceries Online from your nearest Store</h2>
                 <img src="assets/images/icons/gstore.png" />
