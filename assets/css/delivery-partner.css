@@ -29,6 +29,45 @@
   margin-top: 10px;
 }
 
+.partner-section-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.partner-section-banner img {
+  width: 95%;
+  height: fit-content;
+  border-radius: 10px;
+}
+.slider-delivery {
+  display: none !important;
+}
+.page-name {
+  margin-top: 80px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.page-name h1 {
+  font-family: "Fredoka One", cursive;
+  color: #69093d;
+  text-align: center;
+}
+.page-name span {
+  font-family: "Fredoka One", cursive;
+  color: #ff4e00;
+}
+.divider {
+  border-top: 0.5px solid #c7c7c7c7;
+  border-bottom: 0.5px solid #c7c7c7c7;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 /* =============================================== */
 @media only screen and (max-width: 600px) {
   .delivery-mobile {
