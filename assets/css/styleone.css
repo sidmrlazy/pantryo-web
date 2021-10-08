@@ -184,13 +184,16 @@ font-family: 'Open Sans', sans-serif;
 .static-modal-content {
   padding-left: 20px;
   padding-right: 20px;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  display: flex;
 }
 .static-modal-content h3 {
   font-weight: bold;
   font-size: 20px;
 }
 .static-modal-content p {
-  font-size: 12px;
+  font-size: 16px;
 }
 /* ======= Static Modal End ======= */
 

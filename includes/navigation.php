@@ -20,15 +20,7 @@
     <a class="navbar-brand" href="index.php">
       <img src="assets/images/logo/PantryoLogo.png" alt="PantryoLogo" />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -40,23 +32,16 @@
           <a id="about-nav" class="nav-link" aria-current="page" href="about.php">About us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php#yopartners"><span>Yo</span>Partners</a>
+          <a class="nav-link" aria-current="page" href="Yo-Partner.php"><span>Yo</span>Partners</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php#yoshops"><span>Yo</span>Shops</a>
+          <a class="nav-link" aria-current="page" href="Yo-Shop.php"><span>Yo</span>Shops</a>
         </li>
         <!-- <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">Contact</a>
                 </li> -->
         <li class="main-nav nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             About us
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -81,7 +66,7 @@
             </li>
             <!-- =========================================================== -->
 
-            <!-- =========================================================== -->            
+            <!-- =========================================================== -->
             <li class="d-flex justify-content-start align-items-center p-2">
               <ion-icon name="finger-print-outline" id="nav-icon"></ion-icon>
               <a class="dropdown-item" href="privacy-policy.php">Privacy Policy</a>
@@ -90,7 +75,7 @@
               <hr class="dropdown-divider" />
             </li>
             <!-- =========================================================== -->
-            
+
             <!-- =========================================================== -->
             <li class="d-flex justify-content-start align-items-center p-2">
               <ion-icon name="call-outline" id="nav-icon"></ion-icon>

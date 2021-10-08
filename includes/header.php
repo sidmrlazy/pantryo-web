@@ -29,13 +29,15 @@
     <link rel="shortcut icon" href="assets/images/logo/browser_icon.png" type="image/x-icon">
     <!-- Browser Icon End -->
 
-    <!-- Lottie Animation Start -->    
+    <!-- Lottie Animation Start -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Lottie Animation End -->
 
     <!-- Css Animation Start -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- Css Animation End -->
+
+
 
     <title>Pantryo: Because Groceries, Can't Drive</title>
 </head>

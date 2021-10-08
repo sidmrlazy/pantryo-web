@@ -13,10 +13,10 @@
     </div>
 
     <div class="col-md-3 footer-parts">
-    <a href="privacy-policy.php">
+        <a href="privacy-policy.php">
             <p>Privacy Policy</p>
         </a>
-        
+
         <a href="tnc.php">
             <p>Terms & Conditions</p>
         </a>
@@ -30,9 +30,9 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <!-- Ionicons End -->
 
-<script src="assets/jqueryone.js"></script>
-<script src="assets/shopquery.js"></script>
-<script src="assets/deliverypartnerquery.js"></script>
+<script src="assets/js/jqueryone.js"></script>
+<script src="assets/js/shoptext.js"></script>
+<script src="assets/js/deliverypartnerquery.js"></script>
 
 
 </body>
