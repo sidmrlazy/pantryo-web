@@ -67,6 +67,9 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+#mobile {
+  display: none !important;
+}
 
 /* =============================================== */
 @media only screen and (max-width: 600px) {
@@ -75,5 +78,22 @@
   }
   #delivery-lottie {
     display: none;
+  }
+  #desktop {
+    display: none !important;
+  }
+  #mobile {
+    display: contents !important;
+    margin-top: 20px;
+  }
+  .carousel-item {
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  .carousel-item img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 10px;
   }
 }
