@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/shop.css">
     <link rel="stylesheet" href="assets/css/delivery-partner.css">
     <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <!-- Custom StyleSheet End -->
 
     <!-- Browser Icon Start -->

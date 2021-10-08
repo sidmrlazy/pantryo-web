@@ -1,28 +1,26 @@
 <div class="footer">
-    <div class="col-md-3 footer-parts">
-        <a href="index.php">
-            <p>Home</p>
-        </a>
-        <a href="about.php">
-            <p>About us</p>
-        </a>
-        <!-- <p>Services</p> -->
-        <a href="contact.php">
-            <p>Contact</p>
-        </a>
+    <div class="icon-section">
+        <ion-icon name="logo-facebook" id="social-icon"></ion-icon>
+        <ion-icon name="logo-instagram" id="social-icon"></ion-icon>
+        <ion-icon name="logo-google-playstore" id="social-icon"></ion-icon>
     </div>
 
-    <div class="col-md-3 footer-parts">
-        <a href="privacy-policy.php">
-            <p>Privacy Policy</p>
-        </a>
-
-        <a href="tnc.php">
-            <p>Terms & Conditions</p>
-        </a>
-        <!-- <p>Disclaimer</p>
-        <p>Blogs</p> -->
+    <div class="footer-parts">
+        <a href="index.php">Home</a>
+        <a href="about.php">About us</a>
+        <a href="#">YO Shop</a>
+        <a href="#">YO Partner</a>
+        <a href="contact.php">Contact</a>
     </div>
+
+    <div class="footer-parts-small">
+        <a href="tnc.php">T&C</a>
+        <a href="privacy-policy.php">Privacy Policy</a>
+        <a href="contact.php">Contact</a>
+    </div>
+</div>
+<div class="sub-footer">
+    <p>Designed & Developed by Gizmmo Alchemy</p>
 </div>
 
 <!-- Ionicons Start -->
