@@ -148,6 +148,44 @@ font-family: 'Open Sans', sans-serif;
   width: fit-content;
   height: fit-content;
 }
+.reg-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px !important;
+  margin-bottom: 150px !important;
+  text-decoration: none !important;
+}
+.reg-section p {
+  font-size: 36px;
+  margin-right: 20px;
+  text-decoration: none !important;
+  color: #000;
+}
+.reg-section p:hover {
+  font-size: 36px;
+  margin-right: 20px;
+  text-decoration: none !important;
+  color: #000;
+}
+.reg-section p span {
+  font-size: 36px;
+  margin-right: 20px;
+  font-family: "Fredoka One", cursive;
+  text-decoration: none;
+  color: #000;
+}
+.reg-section p span:hover {
+  font-size: 36px;
+  margin-right: 20px;
+  font-family: "Fredoka One", cursive;
+  text-decoration: none;
+  color: #000;
+}
+.reg-section img {
+  width: 30% !important;
+  height: auto;
+}
 
 /* ======= Banner Section End ======= */
 

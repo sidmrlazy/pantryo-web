@@ -25,3 +25,11 @@
     <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_y3qeunlh/data.json" background="transparent" speed="1" class="delivery-lottie" loop autoplay></lottie-player>
   </div>
 </div>
+
+<a href="https://play.google.com/store/apps/details?id=com.pantryodeliverypartner" target="_blank" class="container mt-5 reg-section">
+  <div>
+    <p>Become a <span>PantrYO Partner today!</span></p>
+    <p style="font-size: 18px; margin-top: -15px">Download the App to <strong>REGISTER</strong></p>
+  </div>
+  <img src="assets/images/icons/gstore.png" alt="">
+</a>
