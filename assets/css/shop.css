@@ -65,7 +65,6 @@ font-family: 'Open Sans', sans-serif;
 .shop-section-heading span {
   color: #5e3360 !important;
 }
-
 .shop-details p {
   margin-top: 20px;
   font-size: 20px;
@@ -114,6 +113,42 @@ font-family: 'Open Sans', sans-serif;
   height: auto;
 }
 
+.shop-details {
+  background-color: #5e3360;
+  /* padding-top: 25px;
+  padding-bottom: 25px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.shop-details h1 {
+  color: #fff;
+  font-family: "Fredoka One", cursive;
+  margin-bottom: 20px;
+  font-size: 56px !important;
+}
+.shop-details h1 span {
+  color: #bf6228 !important;
+  font-family: "Fredoka One", cursive;
+  margin-bottom: 20px;
+  font-size: 56px !important;
+}
+.shop-details li {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: justify;
+  margin-right: 100px;
+}
+.shop-details span {
+  font-weight: bold !important;
+}
+.delivery-lottie {
+  width: fit-content;
+  height: fit-content;
+}
+
 /* ======= Banner Section End ======= */
 
 /* ==================================================================== */
@@ -123,5 +158,31 @@ font-family: 'Open Sans', sans-serif;
   }
   #shop-lottie {
     display: none;
+  }
+  .shop-details {
+    background-color: #5e3360;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: column;
+  }
+  .shop-details li {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: justify;
+    margin-right: 0;
+  }
+  .delivery-lottie {
+    display: none;
+  }
+  .shop-details h1 span {
+    color: #bf6228 !important;
+    font-family: "Fredoka One", cursive;
+    margin-bottom: 20px;
+    font-size: 56px !important;
   }
 }

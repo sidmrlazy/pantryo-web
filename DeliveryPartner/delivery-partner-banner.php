@@ -41,13 +41,11 @@
                 <img src="assets/images/delivery-images/7.png" class="d-block w-100" alt="...">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -59,4 +57,30 @@
     <div class="divider">
         <h1><span>Online</span> Grocery Delivery</h1>
     </div>
+</div>
+
+<div class="container mt-5">
+    <p>
+        Have a Bike, Scooter, Cycle, E-rickshaw or willing to even WALK? Are 18+ of
+        age and looking to make a living? Well, why not become our Grocery Delivery
+        Partner- it doesn’t even matter if you are a Man, Woman, transgender or
+        transsexual!
+    </p>
+    <p>
+        PantrYO Delivery Partners are the center of our operations and we have made
+        sure we provide them with much more than basic amenities like same-day
+        Payments, more money per kilometer, flexible working hours and much more.
+        Becoming a PantrYO Partner is very easy too. Download our android Partner
+        App from the playstore, complete the Registration process by providing your
+        Basic information, vehicle details | documents and that’s it! You will then
+        start receiving Grocery Orders from around you. You will be notified about
+        the Shop Pick Up (from where you have to pick the order) location on the App
+        and also the Customer’s (Drop) Location on the App.
+    </p>
+
+    <p>
+        Your Daily earning will be based on the kilometers you cover per Day. In
+        short, More orders delivered= more earning.
+    </p>
+
 </div>
