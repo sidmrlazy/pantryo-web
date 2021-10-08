@@ -2,8 +2,8 @@
 var text = [
   "Don’t swiggy,<br> Just Ghar ka Khana",
   "zo-MAA-to ki kasam,<br> Stay home",
-  "Gro-fers is Next Day,<br> PantrYO is Today",
-  "No Bazar is BIGger than your<br> Yo-Yo ki Dukaan",
+  "Gro-fers is Next Day,<br> Pantr<span class='new-span'>YO</span> is Today",
+  "No Bazar is BIGger than your<br> <span class='new-span'>Yo-Yo</span> ki Dukaan",
   "You don’t need a BIGger Basket,<br> you just need Araam",
 ];
 var counter = 0;

@@ -4,6 +4,25 @@ font-family: 'Fredoka One', cursive;
 font-family: 'Open Sans', sans-serif; 
 ================================= */
 
+.page-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ff4e00 !important; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.page-banner h1 {
+  font-weight: bold;
+  color: #69093d !important;
+  font-family: "Fredoka One", cursive;
+}
+.page-banner span {
+  color: #ff4e00 !important;
+  font-family: "Fredoka One", cursive;
+}
+
 .about-section {
   margin-top: 40px !important;
 }
@@ -11,22 +30,30 @@ font-family: 'Open Sans', sans-serif;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   margin-top: 20px;
+  color: #777;
 }
 .about-section h4 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
-  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #777;
 }
 .about-section p {
   font-family: "Open Sans", sans-serif;
   text-align: justify !important;
-  font-size: 18px;
+  font-size: 16px;
 }
-.about-section span {
+/* .about-section span {
   font-weight: bold;
-}
+} */
 .about-section a {
   font-weight: bold;
   text-decoration: none;
   color: #000;
+}
+
+.about-mid span {
+  color: #69093d !important;
+  font-weight: bold;
 }
