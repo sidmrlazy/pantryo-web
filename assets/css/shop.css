@@ -162,12 +162,6 @@ font-family: 'Open Sans', sans-serif;
   text-decoration: none !important;
   color: #000;
 }
-.reg-section p:hover {
-  font-size: 36px;
-  margin-right: 20px;
-  text-decoration: none !important;
-  color: #000;
-}
 .reg-section p span {
   font-size: 36px;
   margin-right: 20px;
@@ -175,13 +169,7 @@ font-family: 'Open Sans', sans-serif;
   text-decoration: none;
   color: #000;
 }
-.reg-section p span:hover {
-  font-size: 36px;
-  margin-right: 20px;
-  font-family: "Fredoka One", cursive;
-  text-decoration: none;
-  color: #000;
-}
+
 .reg-section img {
   width: 30% !important;
   height: auto;
@@ -222,5 +210,32 @@ font-family: 'Open Sans', sans-serif;
     font-family: "Fredoka One", cursive;
     margin-bottom: 20px;
     font-size: 56px !important;
+  }
+  .reg-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+    text-decoration: none !important;
+    flex-direction: column;
+  }
+  .reg-section p {
+    font-size: 30px;
+    margin-right: 20px;
+    text-decoration: none !important;
+    color: #000;
+    line-height: 40px;
+  }
+  .reg-section p span {
+    font-size: 44px;
+    margin-right: 20px;
+    font-family: "Fredoka One", cursive;
+    text-decoration: none;
+    color: #000;
+  }
+  .reg-section img {
+    width: 50% !important;
+    height: auto;
   }
 }

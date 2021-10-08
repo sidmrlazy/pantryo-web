@@ -2,11 +2,9 @@
 <?php include 'includes/navigation.php'; ?>
 
 <!-- ========== Shop Section ========== -->
-<?php include 'Shop/shop-banner.php';
-?>
-<?php include 'Shop/shop-section.php';
-?>
-<?php include 'Shop/shop-details.php';
+<?php include 'Shop/shop-banner.php'; ?>
+<?php include 'Shop/shop-section.php'; ?>
+<?php //include 'Shop/shop-details.php'; 
 ?>
 <!-- ========== Shop Section ========== -->
 

@@ -7,6 +7,9 @@
   <a href="tnc.php">
     <p>T&C</p>
   </a>
+  <a href="about.php">
+    <p>About us</p>
+  </a>
   <!-- <p>Disclaimer</p> -->
   <!-- <p>Blogs</p> -->
   <a href="contact.php">
@@ -29,14 +32,14 @@
           <a class="nav-link" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a id="about-nav" class="nav-link" aria-current="page" href="about.php">About us</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" aria-current="page" href="Yo-Partner.php"><span>Yo</span>Partners</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="Yo-Shop.php"><span>Yo</span>Shops</a>
         </li>
+        <!-- <li class="nav-item">
+          <a id="about-nav" class="nav-link" aria-current="page" href="about.php">About us</a>
+        </li> -->
         <!-- <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">Contact</a>
                 </li> -->
