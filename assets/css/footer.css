@@ -21,6 +21,12 @@
   margin-bottom: 10px;
   border-bottom: 0.5px solid #c7c7c7c7;
 }
+.icon-section a {
+  text-decoration: none !important;
+}
+.icon-section a:hover {
+  text-decoration: none !important;
+}
 #social-icon {
   font-size: 36px;
   margin: 30px;
