@@ -80,7 +80,10 @@
         <a class="navbar-brand" href="index.php">
             <!-- <img src="<?php echo base_url() ?>assets/logo/PantryoLogo.png" /> -->
             <li class="nav-item d-flex justify-content-center align-items-center">
-                <a class="nav-link" aria-current="page" href="<?php echo base_url('home/login') ?>">Logout</a>
+            <li class="dropdown-row">
+                <ion-icon name="log-out-outline"></ion-icon>
+            </li>
+            <a class="nav-link" aria-current="page" href="<?php echo base_url('home/login') ?>">Logout</a>
             </li>
         </a>
     </div>
