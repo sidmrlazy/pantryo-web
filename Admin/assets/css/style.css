@@ -6,6 +6,11 @@
 #basic-icon {
 	color: #5e3360 !important;
 }
+#logout-btn {
+	color: #fff !important;
+	margin-right: -20px !important;
+	margin-bottom: -3px;
+}
 #firebase {
 	color: #ed7e0d;
 }

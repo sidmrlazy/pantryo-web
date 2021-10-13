@@ -1,7 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+// Development: 'When working on local commit default '
+// $active_group = 'development';
 
+// default: 'When working on Live commit Development '
 $active_group = 'default';
 $query_builder = TRUE;
 
