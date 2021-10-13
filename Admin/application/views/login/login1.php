@@ -5,7 +5,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url()?>assets/js/myalert.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/myalert.js"></script>
     <style>
         body,
         html {
@@ -49,28 +49,27 @@
             border: 0;
             padding: 10px;
         }
-    </style> 
+    </style>
 </head>
 
 <body>
     <div class="w-100 pt-5">
-       
+
         <div class="d-flex justify-content-center align-items-center">
-       
+
             <form class="form-signin p-5 m-5 login-form w-50" action="<?php echo base_url('LoginAuth/checking') ?>" method="post">
-            <?php 
-        if($this->session->flashdata('error'))
-        {?>
-            
-            <div class="alert alert-danger" role="alert">
-           <?php
-           echo $message=$this->session->flashdata('error');
-           ?>
-          </div>
-       <?php }
-        ?>   
-        
-            <h3 class="heading-login">LOGIN</h3>
+                <?php
+                if ($this->session->flashdata('error')) { ?>
+
+                    <div class="alert alert-danger" role="alert">
+                        <?php
+                        echo $message = $this->session->flashdata('error');
+                        ?>
+                    </div>
+                <?php }
+                ?>
+
+                <h3 class="heading-login">LOGIN</h3>
                 <p class="caption-login">Please login</p>
                 <input type="text" name="uname" id="inputname" class="form-control form-group" placeholder="Admin ID" required autofocus>
                 <input type="password" name="password" id="inputPassword" class="form-control form-group" placeholder="Password" required autofocus>
