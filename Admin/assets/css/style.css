@@ -1,0 +1,140 @@
+* {
+	font-family: "Open Sans", sans-serif;
+}
+
+/* ICONS */
+#basic-icon {
+	color: #5e3360 !important;
+}
+#firebase {
+	color: #ed7e0d;
+}
+.navbar {
+	background-color: #5e3360 !important;
+}
+.navbar-brand {
+	max-width: 50%;
+	max-height: auto;
+}
+.navbar-brand img {
+	width: 20%;
+	height: auto;
+}
+.nav-link {
+	color: #fff !important;
+}
+.dropdown-row {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 10px;
+}
+.dashboard-card {
+	margin-top: 20px !important;
+	border: 1px solid #c7c7c7c7;
+	border-radius: 10px;
+	padding: 30px;
+	flex: 1;
+	margin: 5px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.dashboard-card-div {
+	margin-left: 20px !important;
+}
+.dashboard-card img {
+	width: 50px !important;
+}
+.dashboard-card h5 {
+	font-weight: 600;
+}
+.dashboard-card h3 {
+	font-weight: bold;
+}
+.orders {
+	margin-top: 30px;
+	flex: 1;
+	justify-content: flex-start;
+	align-items: center;
+}
+.orders-header {
+	background-color: #c7c7c7c7;
+	padding: 10px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.orders-header p {
+	font-weight: bold;
+	color: #000;
+	flex: 1 !important;
+}
+
+@media only screen and (max-width: 600px) {
+	.dashboard-mobile {
+		flex-direction: column !important;
+	}
+	.dashboard-card {
+		flex: 1;
+		margin: 5px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+	}
+}
+
+.viewbutton {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.dashboardcard {
+	margin-top: 20px !important;
+	border: 1px solid #c7c7c7c7;
+	border-radius: 10px;
+	padding: 30px;
+
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.imageheight {
+	height: 40px;
+	margin-right: 10px;
+}
+.tablefont th {
+	font-size: 14px;
+	font-weight: 400 !important;
+	font-family: "Open Sans", sans-serif;
+	padding: 20px !important;
+}
+#default {
+	background-color: #5e3360 !important;
+	color: white;
+}
+.borderradius {
+	border-radius: 28px;
+	padding: 20px;
+}
+.dashboardspan {
+	font-weight: bold;
+	margin-left: 10px;
+	font-size: 24px;
+	text-decoration: none !important;
+	color: #000;
+}
+.card {
+	border: none;
+	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+
+.cardmargin {
+	margin: 35px;
+}
+.blockuserbuttonstyle {
+	background-color: rgb(224, 118, 118) !important;
+	color: white;
+}
