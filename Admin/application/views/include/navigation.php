@@ -73,6 +73,10 @@
                     </ul>
                 </li>
                 <!-- ======== Shops ======== -->
+
+                <li class="nav-item d-flex justify-content-center align-items-center">
+                    <a class="nav-link" aria-current="page" href="<?php echo base_url('home/login') ?>">Logout</a>
+                </li>
             </ul>
         </div>
     </div>
