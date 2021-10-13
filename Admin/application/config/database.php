@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 
 $active_group = 'development';
@@ -8,8 +8,8 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'username' => 'u891777119_pantryo',
+	'password' => 'u891777119_Pantryo',
 	'database' => 'u891777119_pantryo',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -30,8 +30,8 @@ $db['default'] = array(
 $db['development'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'username' => 'u891777119_pantryo',
+	'password' => 'u891777119_Pantryo',
 	'database' => 'u891777119_pantryo',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
