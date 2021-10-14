@@ -531,22 +531,13 @@ class Home extends MY_Controller
     $condition = "partner_id=$partner_id";
     $effectrowsec = $this->home->updatedata($data1, $condition);
   }
+
+
     public function notificationtest()
    {
-      // $partners=$this->input->post('partners');
-      // $usertype=$this->input->post('usertype');
-      // $mobilenumber=$this->input->post('mobilenumber');
       $title="Test Title";
       $body="Test body description";
-      //if(!empty($partners))
-      // {
-        //if($partners=='allshop')
-        // {
-          // $this->home->_table_name='pantryo_partner';
-          // $data=$this->home->get_all_data_bulk();
-          // foreach($data as $row)
-          // {
-           $partner_token="dlv4prNORWWVRuuBHcE_eo:APA91bFmebMqGjyBiMDbWMjGGDy3iDNgLcJUZKC1NrA20-CeqrDtz3I8ddBOH4vji9QGK7FdGs8NKMHha0Qh5e6dN1ONQpbWsxBitltbLhcSBGSU6_yAHihxLj9Utro80u0WchAUl-wt";
+           $partner_token="eZ0Lx6kkTJi9eiagquVMyD:APA91bEE5EZUbdpTxwS7Nuk7xCBHUIhvKKisyMtC9Q1Er1a_M8Gq5V6_et6OxCPxf89n3EUiF6EFX9UmhJ4Wr1rERKEWyLLC1qWZLAqDKVDG7OwC_3nj2BwqkWs9X3fgoCN2I8ljpril";
            $url = "https://fcm.googleapis.com/fcm/send";
            $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
            
@@ -569,9 +560,5 @@ class Home extends MY_Controller
             die('FCM Send Error: ' . curl_error($ch));
             }
             curl_close($ch);
-          //}       
-          //redirect('home/sendnotification');
-        //}
-      //}
    }
 }
