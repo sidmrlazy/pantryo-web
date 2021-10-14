@@ -81,7 +81,7 @@
             <!-- <img src="<?php echo base_url() ?>assets/logo/PantryoLogo.png" /> -->
             <li class="nav-item d-flex justify-content-center align-items-center">
                 <ion-icon name="log-out-outline" id="logout-btn"></ion-icon>
-                <a class="nav-link" aria-current="page" href="<?php echo base_url('home/login') ?>">Logout</a>
+                <a class="nav-link" aria-current="page" href="<?php echo base_url('home') ?>">Logout</a>
             </li>
         </a>
     </div>
