@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends MY_Controller {
@@ -15,37 +14,11 @@ class Home extends MY_Controller {
            redirect('/');
        }
     }
-//     $message="checking the messsage";
-//     $type="error";
-//    set_message($type,$message);
 
-	public function index() 
-	{
-=======
-defined('BASEPATH') or exit('No direct script access allowed');
-
-//     $message="checking the messsage";
-//     $type="error";
-//    set_message($type,$message);
-
-class Home extends MY_Controller
-{
-
-  public function __construct()
-  {
-    parent::__construct();
-    $this->load->model('HomeModel', 'home');
-    $this->load->model('LoginModel');
-    $this->load->library('form_validation');
-    if ($this->LoginModel->loggedin() != true) {
-      redirect('/');
-    }
-  }
   public function index()
   {
->>>>>>> 07038bff6447ca10298542f8393b88410a408ebf
     session_destroy();
-    $this->load->view('login/login1');
+    $this->load->view('Login/login1');
   }
 
   public function login()
