@@ -399,7 +399,7 @@ class Home extends MY_Controller
           $userToken = $row->userToken;
           $url = "https://fcm.googleapis.com/fcm/send";
           $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
-          $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
+          $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1',);
           $arrayToSend = array('to' => $userToken, 'notification' => $notification, 'priority' => 'high');
           $json = json_encode($arrayToSend);
           $headers = array();
