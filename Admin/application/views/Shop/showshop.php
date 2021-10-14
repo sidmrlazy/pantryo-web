@@ -15,6 +15,7 @@
                         <th scope="col">Shop Address</th>
                         <th scope="col">Kyc Status</th>
                         <th scope="col">Status</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
