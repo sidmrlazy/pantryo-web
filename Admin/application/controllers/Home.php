@@ -548,7 +548,7 @@ class Home extends MY_Controller
           // {
            $partner_token="dlv4prNORWWVRuuBHcE_eo:APA91bFmebMqGjyBiMDbWMjGGDy3iDNgLcJUZKC1NrA20-CeqrDtz3I8ddBOH4vji9QGK7FdGs8NKMHha0Qh5e6dN1ONQpbWsxBitltbLhcSBGSU6_yAHihxLj9Utro80u0WchAUl-wt";
            $url = "https://fcm.googleapis.com/fcm/send";
-           $serverKey = 'AAAAIIoSzdk:APA91bFqAg9Vu4T-_LYX5EPz9UVtqZTp0bRWOpkJLgm6GqIf4QAJtrW6RISmqWHZl6T-ykQrNLpo39kbRHLBsfGmqyz5JP8hxNCUzrfw8ECkcOItsO173OGeIrPf01_jiTLGjJsgwr33';
+           $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
            
            $notification = array('title' =>$title , 'body' => $body, 'sound' => 'default', 'badge' => '1');
            $arrayToSend = array('to' => $partner_token, 'notification' => $notification,'priority'=>'high');
