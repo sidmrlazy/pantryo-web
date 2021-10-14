@@ -579,4 +579,48 @@ class Home extends MY_Controller
  
     } 
 
-}
+    public function notificationtest()
+   {
+      // $partners=$this->input->post('partners');
+      // $usertype=$this->input->post('usertype');
+      // $mobilenumber=$this->input->post('mobilenumber');
+      $title="Test Title";
+      $body="Test body description";
+      //if(!empty($partners))
+      // {
+        //if($partners=='allshop')
+        // {
+          // $this->home->_table_name='pantryo_partner';
+          // $data=$this->home->get_all_data_bulk();
+          // foreach($data as $row)
+          // {
+           $partner_token="dlv4prNORWWVRuuBHcE_eo:APA91bFmebMqGjyBiMDbWMjGGDy3iDNgLcJUZKC1NrA20-CeqrDtz3I8ddBOH4vji9QGK7FdGs8NKMHha0Qh5e6dN1ONQpbWsxBitltbLhcSBGSU6_yAHihxLj9Utro80u0WchAUl-wt";
+           $url = "https://fcm.googleapis.com/fcm/send";
+           $serverKey = 'AAAAIIoSzdk:APA91bFqAg9Vu4T-_LYX5EPz9UVtqZTp0bRWOpkJLgm6GqIf4QAJtrW6RISmqWHZl6T-ykQrNLpo39kbRHLBsfGmqyz5JP8hxNCUzrfw8ECkcOItsO173OGeIrPf01_jiTLGjJsgwr33';
+           
+           $notification = array('title' =>$title , 'body' => $body, 'sound' => 'default', 'badge' => '1');
+           $arrayToSend = array('to' => $partner_token, 'notification' => $notification,'priority'=>'high');
+           $json = json_encode($arrayToSend);
+           $headers = array();
+           $headers[] = 'Content-Type: application/json';
+           $headers[] = 'Authorization: key='. $serverKey;
+           $ch = curl_init();
+           curl_setopt($ch, CURLOPT_URL, $url);
+           curl_setopt($ch, CURLOPT_CUSTOMREQUEST,"POST");
+           curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+           curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);
+           //Send the request
+           $response = curl_exec($ch);
+           //Close request
+            if ($response === FALSE) 
+            {
+            die('FCM Send Error: ' . curl_error($ch));
+            }
+            curl_close($ch);
+          //}       
+          //redirect('home/sendnotification');
+        //}
+      //}
+   }
+
+  }
