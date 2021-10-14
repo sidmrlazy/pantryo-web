@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends MY_Controller {
@@ -20,76 +21,99 @@ class Home extends MY_Controller {
 
 	public function index() 
 	{
+=======
+defined('BASEPATH') or exit('No direct script access allowed');
+
+//     $message="checking the messsage";
+//     $type="error";
+//    set_message($type,$message);
+
+class Home extends MY_Controller
+{
+
+  public function __construct()
+  {
+    parent::__construct();
+    $this->load->model('HomeModel', 'home');
+    $this->load->model('LoginModel');
+    $this->load->library('form_validation');
+    if ($this->LoginModel->loggedin() != true) {
+      redirect('/');
+    }
+  }
+  public function index()
+  {
+>>>>>>> 07038bff6447ca10298542f8393b88410a408ebf
     session_destroy();
-		$this->load->view('Login/login1');
-	}
- 
-    public function login()
-    {
-        $today=strtotime('today'); 
-        $tomorrow=strtotime('tomorrow'); 
-        //customer count
-        $this->home->_table_name='pantryo_customer';
-        $data['customer_count']=count($this->home->get_all_data_bulk());
-        //shop partner count
-        $this->home->_table_name='pantryo_partner';
-        $data['shopPartner_count']=count($this->home->get_all_data_bulk());
-        //delivery partner count
-        $this->home->_table_name='pantryo_delivery_partner';
-        $data['deliveryPartner_count']=count($this->home->get_all_data_bulk());
+    $this->load->view('login/login1');
+  }
 
-        $this->home->_table_name='pantryo_cart_product';
-        $condition="create_date > $today and create_date < $tomorrow";
-               
-        // $data['order_details']=$this->home->get_all_data_bulk();
-        $data['order_details']=$this->home->gettodayorder();
+  public function login()
+  {
+    $today = strtotime('today');
+    $tomorrow = strtotime('tomorrow');
+    //customer count
+    $this->home->_table_name = 'pantryo_customer';
+    $data['customer_count'] = count($this->home->get_all_data_bulk());
+    //shop partner count
+    $this->home->_table_name = 'pantryo_partner';
+    $data['shopPartner_count'] = count($this->home->get_all_data_bulk());
+    //delivery partner count
+    $this->home->_table_name = 'pantryo_delivery_partner';
+    $data['deliveryPartner_count'] = count($this->home->get_all_data_bulk());
 
-        //  print_r($data);exit;
-        // foreach($order_details as $details)
-        // {
-        //     $orderId=$details[0]->orderId;
-        //     $unit=$this->home->getquantityandunit($orderId);
-        //     // print_r($unit);
-        //     foreach($unit as $checkunit)
-        //     {
-        //         if($checkunit->productUnit == 'gm')
-        //         {
-        //         }
-        //     }
-        // }
-      
+    $this->home->_table_name = 'pantryo_cart_product';
+    $condition = "create_date > $today and create_date < $tomorrow";
 
-        $this->pages('Dashboard/dashboard',$data);
-    }
-    public function showcustomer() 
-    {
-        $this->home->_table_name='pantryo_customer';
-        $data['customer_details']=$this->home->get_all_data_bulk();
-        $this->pages('Customer/showcustomer',$data);
-    }
-    public function showdelivery()
-    {
-        $this->home->_table_name='pantryo_delivery_partner';
-        $data['delivery_details']=$this->home->get_all_data_bulk();
-        
-       $this->pages('Delivery/showdelivery',$data);
-    }
-    public function showshop()
-    {
-        $this->home->_table_name='pantryo_partner';
-        $data['partner_details']=$this->home->get_all_data_bulk();
-        
-       $this->pages('Shop/showshop',$data);
-    }
-    public function order()
-    { 
-        $this->home->_table_name='pantryo_cart_product';
-        $data['order_details']=$this->home->get_all_data_bulk();
-        $this->pages('Order/showorder',$data);
-    }
-   public function transfers()
-   {
-       echo "transfers";
+    // $data['order_details']=$this->home->get_all_data_bulk();
+    $data['order_details'] = $this->home->gettodayorder();
+
+    //  print_r($data);exit;
+    // foreach($order_details as $details)
+    // {
+    //     $orderId=$details[0]->orderId;
+    //     $unit=$this->home->getquantityandunit($orderId);
+    //     // print_r($unit);
+    //     foreach($unit as $checkunit)
+    //     {
+    //         if($checkunit->productUnit == 'gm')
+    //         {
+    //         }
+    //     }
+    // }
+
+
+    $this->pages('Dashboard/dashboard', $data);
+  }
+  public function showcustomer()
+  {
+    $this->home->_table_name = 'pantryo_customer';
+    $data['customer_details'] = $this->home->get_all_data_bulk();
+    $this->pages('Customer/showcustomer', $data);
+  }
+  public function showdelivery()
+  {
+    $this->home->_table_name = 'pantryo_delivery_partner';
+    $data['delivery_details'] = $this->home->get_all_data_bulk();
+
+    $this->pages('Delivery/showdelivery', $data);
+  }
+  public function showshop()
+  {
+    $this->home->_table_name = 'pantryo_partner';
+    $data['partner_details'] = $this->home->get_all_data_bulk();
+
+    $this->pages('Shop/showshop', $data);
+  }
+  public function order()
+  {
+    $this->home->_table_name = 'pantryo_cart_product';
+    $data['order_details'] = $this->home->get_all_data_bulk();
+    $this->pages('Order/showorder', $data);
+  }
+  public function transfers()
+  {
+    echo "transfers";
     //    $this->pages('Navigation/transfers');
    }
 
@@ -576,6 +600,7 @@ class Home extends MY_Controller {
     
         $this->pages('Shop/pendingverifiyform',$data);
     }
+<<<<<<< HEAD
     public function partnerpendingfrom()
     {
         $partner_id=$this->input->post('partner_id');
@@ -616,3 +641,58 @@ class Home extends MY_Controller {
 
   
 }
+=======
+  }
+
+  public function pendingVerificationshowform($id)
+  {
+    $partner_id = base64_decode($id);
+    $this->home->_table_name = 'pantryo_partner';
+    $condition = "partner_id =$partner_id";
+    $data['partner_details'] = $this->home->get_all_data_bulk($condition);
+
+    $this->home->_table_name = 'partner_registration_fee';
+    $condition1 = "partner_id ='P$partner_id'";
+    $data['partner_account'] = $this->home->get_all_data_bulk($condition1);
+
+
+    $this->pages('Shop/pendingverifiyform', $data);
+  }
+  public function partnerpendingfrom()
+  {
+    $partner_id = $this->input->post('partner_id');
+
+    $data = array(
+      'account_id' => $this->input->post('partnerAcountId')
+    );
+    $this->home->_table_name = 'partner_registration_fee';
+    $condition = "partner_id ='P$partner_id'";
+    $effectrow = $this->home->updatedata($data, $condition);
+
+    $data1 = array(
+      'partner_kycStatus' => '2'
+    );
+    $this->home->_table_name = 'pantryo_partner';
+    $condition = "partner_id=$partner_id";
+    $effectrowsec = $this->home->updatedata($data1, $condition);
+
+    redirect('Home/pendingVerification');
+  }
+}
+
+// if(!empty($effectrow))
+    // {
+    //     $data=array(
+    //         'partner_kycStatus'=>'2'
+    //    );
+    //    $this->home->_table_name='pantryo_partner';
+    //    $condition="partner_id=$partner_id";
+
+    //    $effectrowsec=$this->home->updatedata($data,$condition);
+
+    //  redirect('Home/pendingVerification');
+    // }
+    // else{
+    // redirect('Home/pendingVerification');
+    // }
+>>>>>>> 07038bff6447ca10298542f8393b88410a408ebf

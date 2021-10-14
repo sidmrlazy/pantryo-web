@@ -2,10 +2,10 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 // Development: 'When working on local commit default '
-// $active_group = 'development';
+$active_group = 'development';
 
 // default: 'When working on Live commit Development '
-$active_group = 'default';
+//$active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -13,11 +13,11 @@ $db['default'] = array(
 
 	'hostname' => 'localhost',
 	// Live
-	'username' => 'u891777119_pantryo',
-	'password' => 'u891777119_Pantryo',
+	// 'username' => 'u891777119_pantryo',
+	// 'password' => 'u891777119_Pantryo',
 	// Localhost
-	// 'username' => 'root',
-	// 'password' => '',
+	'username' => 'root',
+	'password' => '',
 
 	'database' => 'u891777119_pantryo',
 	'dbdriver' => 'mysqli',
