@@ -10,8 +10,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	// Live
+	
 	'hostname' => 'localhost',
+	// Live
 	'username' => 'u891777119_pantryo',
 	'password' => 'u891777119_Pantryo',
 	// Localhost
