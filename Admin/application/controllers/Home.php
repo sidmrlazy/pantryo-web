@@ -537,7 +537,7 @@ class Home extends MY_Controller
    {
       $title="Test Title";
       $body="Test body description";
-           $partner_token="eZ0Lx6kkTJi9eiagquVMyD:APA91bEE5EZUbdpTxwS7Nuk7xCBHUIhvKKisyMtC9Q1Er1a_M8Gq5V6_et6OxCPxf89n3EUiF6EFX9UmhJ4Wr1rERKEWyLLC1qWZLAqDKVDG7OwC_3nj2BwqkWs9X3fgoCN2I8ljpril";
+           $partner_token="forAstMHQ8ycef7_DF_Q7X:APA91bGaIdy9QAswHoJLWVUM53q69nvj6i1mE8CgkIPuYGqhE4RsagASfNsrMnBXXHNXSA6Hy220rr5kTTraR6znFh7cx3YyocHF-UxbpXpysKtv396WXzYHVNRZijq7TDaT7Z_PNPMV";
            $url = "https://fcm.googleapis.com/fcm/send";
            $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
            
