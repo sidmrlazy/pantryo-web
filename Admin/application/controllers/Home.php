@@ -13,81 +13,82 @@ class Home extends MY_Controller
     if ($this->LoginModel->loggedin() != true) {
       redirect('/');
     }
-  }
-  //     $message="checking the messsage";
-  //     $type="error";
-  //    set_message($type,$message);
-  public function index()
-  {
-    $this->load->view('Login/login1');
-  }
+//     $message="checking the messsage";
+//     $type="error";
+//    set_message($type,$message);
+//
+	public function index() 
+	{
+    session_destroy();
+		$this->load->view('Login/login1');
+	}
+ 
+    public function login()
+    {
+        $today=strtotime('today'); 
+        $tomorrow=strtotime('tomorrow'); 
+        //customer count
+        $this->home->_table_name='pantryo_customer';
+        $data['customer_count']=count($this->home->get_all_data_bulk());
+        //shop partner count
+        $this->home->_table_name='pantryo_partner';
+        $data['shopPartner_count']=count($this->home->get_all_data_bulk());
+        //delivery partner count
+        $this->home->_table_name='pantryo_delivery_partner';
+        $data['deliveryPartner_count']=count($this->home->get_all_data_bulk());
 
-  public function login()
-  {
-    $today = strtotime('today');
-    $tomorrow = strtotime('tomorrow');
-    //customer count
-    $this->home->_table_name = 'pantryo_customer';
-    $data['customer_count'] = count($this->home->get_all_data_bulk());
-    //shop partner count
-    $this->home->_table_name = 'pantryo_partner';
-    $data['shopPartner_count'] = count($this->home->get_all_data_bulk());
-    //delivery partner count
-    $this->home->_table_name = 'pantryo_delivery_partner';
-    $data['deliveryPartner_count'] = count($this->home->get_all_data_bulk());
+        $this->home->_table_name='pantryo_cart_product';
+        $condition="create_date > $today and create_date < $tomorrow";
+               
+        // $data['order_details']=$this->home->get_all_data_bulk();
+        $data['order_details']=$this->home->gettodayorder();
 
-    $this->home->_table_name = 'pantryo_cart_product';
-    $condition = "create_date > $today and create_date < $tomorrow";
+        //  print_r($data);exit;
+        // foreach($order_details as $details)
+        // {
+        //     $orderId=$details[0]->orderId;
+        //     $unit=$this->home->getquantityandunit($orderId);
+        //     // print_r($unit);
+        //     foreach($unit as $checkunit)
+        //     {
+        //         if($checkunit->productUnit == 'gm')
+        //         {
+        //         }
+        //     }
+        // }
+      
 
-    // $data['order_details']=$this->home->get_all_data_bulk();
-    $data['order_details'] = $this->home->gettodayorder();
-
-    //  print_r($data);exit;
-    // foreach($order_details as $details)
-    // {
-    //     $orderId=$details[0]->orderId;
-    //     $unit=$this->home->getquantityandunit($orderId);
-    //     // print_r($unit);
-    //     foreach($unit as $checkunit)
-    //     {
-    //         if($checkunit->productUnit == 'gm')
-    //         {
-    //         }
-    //     }
-    // }
-
-
-    $this->pages('Dashboard/dashboard', $data);
-  }
-  public function showcustomer()
-  {
-    $this->home->_table_name = 'pantryo_customer';
-    $data['customer_details'] = $this->home->get_all_data_bulk();
-    $this->pages('Customer/showcustomer', $data);
-  }
-  public function showdelivery()
-  {
-    $this->home->_table_name = 'pantryo_delivery_partner';
-    $data['delivery_details'] = $this->home->get_all_data_bulk();
-
-    $this->pages('Delivery/showdelivery', $data);
-  }
-  public function showshop()
-  {
-    $this->home->_table_name = 'pantryo_partner';
-    $data['partner_details'] = $this->home->get_all_data_bulk();
-
-    $this->pages('Shop/showshop', $data);
-  }
-  public function order()
-  {
-    $this->home->_table_name = 'pantryo_cart_product';
-    $data['order_details'] = $this->home->get_all_data_bulk();
-    $this->pages('Order/showorder', $data);
-  }
-  public function transfers()
-  {
-    echo "transfers";
+        $this->pages('Dashboard/dashboard',$data);
+    }
+    public function showcustomer() 
+    {
+        $this->home->_table_name='pantryo_customer';
+        $data['customer_details']=$this->home->get_all_data_bulk();
+        $this->pages('Customer/showcustomer',$data);
+    }
+    public function showdelivery()
+    {
+        $this->home->_table_name='pantryo_delivery_partner';
+        $data['delivery_details']=$this->home->get_all_data_bulk();
+        
+       $this->pages('Delivery/showdelivery',$data);
+    }
+    public function showshop()
+    {
+        $this->home->_table_name='pantryo_partner';
+        $data['partner_details']=$this->home->get_all_data_bulk();
+        
+       $this->pages('Shop/showshop',$data);
+    }
+    public function order()
+    { 
+        $this->home->_table_name='pantryo_cart_product';
+        $data['order_details']=$this->home->get_all_data_bulk();
+        $this->pages('Order/showorder',$data);
+    }
+   public function transfers()
+   {
+       echo "transfers";
     //    $this->pages('Navigation/transfers');
   }
 
