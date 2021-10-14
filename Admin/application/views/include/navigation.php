@@ -81,8 +81,45 @@
             <!-- <img src="<?php echo base_url() ?>assets/logo/PantryoLogo.png" /> -->
             <li class="nav-item d-flex justify-content-center align-items-center">
                 <ion-icon name="log-out-outline" id="logout-btn"></ion-icon>
-                <a class="nav-link" aria-current="page" href="<?php echo base_url('home') ?>">Logout</a>
+                <a class="nav-link" aria-current="page" href="<?php echo base_url('Home') ?>">Logout</a>
             </li>
         </a>
     </div>
 </nav>
+
+
+<script type="text/javascript">
+function a() {
+    const idleDurationSecs = 60;
+    const redirectUrl = '<?php echo base_url('Home') ?>';
+    let idleTimeout;
+
+    const resetIdleTimeout = function() {
+        if(idleTimeout) clearTimeout(idleTimeout);
+        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+    };
+	
+	// Key events for reset time
+    resetIdleTimeout();
+    window.onmousemove = resetIdleTimeout;
+    window.onkeypress = resetIdleTimeout;
+    window.click = resetIdleTimeout;
+    window.onclick = resetIdleTimeout;
+    window.touchstart = resetIdleTimeout;
+    window.onfocus = resetIdleTimeout;
+    window.onchange = resetIdleTimeout;
+    window.onmouseover = resetIdleTimeout;
+    window.onmouseout = resetIdleTimeout;
+    window.onmousemove = resetIdleTimeout;
+    window.onmousedown = resetIdleTimeout;
+    window.onmouseup = resetIdleTimeout;
+    window.onkeypress = resetIdleTimeout;
+    window.onkeydown = resetIdleTimeout;
+    window.onkeyup = resetIdleTimeout;
+    window.onsubmit = resetIdleTimeout;
+    window.onreset = resetIdleTimeout;
+    window.onselect = resetIdleTimeout;
+    window.onscroll = resetIdleTimeout;
+
+}a();
+</script>
