@@ -15,8 +15,8 @@ $db['default'] = array(
 	'username' => 'u891777119_pantryo',
 	'password' => 'u891777119_Pantryo',
 	// Localhost
-	'username' => 'root',
-	'password' => '',
+	// 'username' => 'root',
+	// 'password' => '',
 
 	'database' => 'u891777119_pantryo',
 	'dbdriver' => 'mysqli',
