@@ -89,6 +89,23 @@
 		align-items: center;
 		width: 100%;
 	}
+	.login-left-section {
+		display: none !important;
+	}
+
+	.login-form {
+		width: 100% !important;
+		margin-top: 20px !important;
+		justify-content: center !important;
+		align-items: center !important;
+		display: flex !important;
+		/* margin-left: 200px; */
+	}
+
+	.card {
+		padding: 50px !important;
+		width: 100% !important;
+	}
 }
 
 .viewbutton {
