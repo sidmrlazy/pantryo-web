@@ -90,7 +90,7 @@
 
 <script type="text/javascript">
 function a() {
-    const idleDurationSecs = 60;
+    const idleDurationSecs = 600;
     const redirectUrl = '<?php echo base_url('Home') ?>';
     let idleTimeout;
 
