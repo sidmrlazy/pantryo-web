@@ -17,6 +17,7 @@ class Home extends MY_Controller {
 //     $message="checking the messsage";
 //     $type="error";
 //    set_message($type,$message);
+//
 	public function index() 
 	{
     session_destroy();
