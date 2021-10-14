@@ -6,6 +6,11 @@
 #basic-icon {
 	color: #5e3360 !important;
 }
+#logout-btn {
+	color: #fff !important;
+	margin-right: -20px !important;
+	margin-bottom: -3px;
+}
 #firebase {
 	color: #ed7e0d;
 }
@@ -83,6 +88,23 @@
 		justify-content: flex-start;
 		align-items: center;
 		width: 100%;
+	}
+	.login-left-section {
+		display: none !important;
+	}
+
+	.login-form {
+		width: 100% !important;
+		margin-top: 20px !important;
+		justify-content: center !important;
+		align-items: center !important;
+		display: flex !important;
+		/* margin-left: 200px; */
+	}
+
+	.card {
+		padding: 50px !important;
+		width: 100% !important;
 	}
 }
 

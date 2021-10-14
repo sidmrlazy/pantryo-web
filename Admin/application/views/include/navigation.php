@@ -73,7 +73,16 @@
                     </ul>
                 </li>
                 <!-- ======== Shops ======== -->
+
+
             </ul>
         </div>
+        <a class="navbar-brand" href="index.php">
+            <!-- <img src="<?php echo base_url() ?>assets/logo/PantryoLogo.png" /> -->
+            <li class="nav-item d-flex justify-content-center align-items-center">
+                <ion-icon name="log-out-outline" id="logout-btn"></ion-icon>
+                <a class="nav-link" aria-current="page" href="<?php echo base_url('home/login') ?>">Logout</a>
+            </li>
+        </a>
     </div>
 </nav>
