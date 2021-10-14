@@ -343,6 +343,7 @@ class Home extends MY_Controller
     $mobilenumber = $this->input->post('mobilenumber');
     $title = $this->input->post('title');
     $body = $this->input->post('body');
+    $image = $this->input->post('image');
     if (!empty($partners)) {
       if ($partners == 'allshop') {
         $this->home->_table_name = 'pantryo_partner';
@@ -376,7 +377,7 @@ class Home extends MY_Controller
         $this->home->_table_name = 'pantryo_delivery_partner';
         $data = $this->home->get_all_data_bulk();
         foreach ($data as $row) {
-          $userToken = $row->userToken;
+          $userToken=$row->userToken;
           $url = "https://fcm.googleapis.com/fcm/send";
           $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
           $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
@@ -392,13 +393,15 @@ class Home extends MY_Controller
           curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
           //Send the request
           $response = curl_exec($ch);
+        }
+        redirect('home/sendnotification');
           //Close request
           if ($response === FALSE) {
             die('FCM Send Error: ' . curl_error($ch));
           }
           curl_close($ch);
-          redirect('home/sendnotification');
-        }
+          
+        
       } elseif ($partners == 'allcustomer') {
         $this->home->_table_name = 'pantryo_customer';
         $data = $this->home->get_all_data_bulk();

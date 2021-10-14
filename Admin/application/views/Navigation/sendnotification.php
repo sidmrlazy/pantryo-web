@@ -48,6 +48,11 @@
               <textarea type="text" class="form-control" name="body" placeholder="Enter notification body"></textarea>
             </div>
 
+            <!-- <div class="col-md-12">
+              <label for="body" class="form-label">Image</label>
+              <input type="file" class="form-control" name="image">
+            </div> -->
+
             <div class="col-md-6">
               <div class="row">
                 <div class="col-md-8">
