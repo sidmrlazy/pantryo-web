@@ -1,13 +1,8 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-//     $message="checking the messsage";
-//     $type="error";
-//    set_message($type,$message);
-
 class Home extends MY_Controller
 {
-
   public function __construct()
   {
     parent::__construct();
@@ -18,10 +13,11 @@ class Home extends MY_Controller
       redirect('/');
     }
   }
+
   public function index()
   {
     session_destroy();
-    $this->load->view('login/login1');
+    $this->load->view('Login/login1');
   }
 
   public function login()
@@ -43,22 +39,6 @@ class Home extends MY_Controller
 
     // $data['order_details']=$this->home->get_all_data_bulk();
     $data['order_details'] = $this->home->gettodayorder();
-
-    //  print_r($data);exit;
-    // foreach($order_details as $details)
-    // {
-    //     $orderId=$details[0]->orderId;
-    //     $unit=$this->home->getquantityandunit($orderId);
-    //     // print_r($unit);
-    //     foreach($unit as $checkunit)
-    //     {
-    //         if($checkunit->productUnit == 'gm')
-    //         {
-    //         }
-    //     }
-    // }
-
-
     $this->pages('Dashboard/dashboard', $data);
   }
   public function showcustomer()
@@ -399,7 +379,7 @@ class Home extends MY_Controller
           $userToken = $row->userToken;
           $url = "https://fcm.googleapis.com/fcm/send";
           $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
-          $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1',);
+          $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
           $arrayToSend = array('to' => $userToken, 'notification' => $notification, 'priority' => 'high');
           $json = json_encode($arrayToSend);
           $headers = array();
@@ -554,19 +534,3 @@ class Home extends MY_Controller
     redirect('Home/pendingVerification');
   }
 }
-
-// if(!empty($effectrow))
-    // {
-    //     $data=array(
-    //         'partner_kycStatus'=>'2'
-    //    );
-    //    $this->home->_table_name='pantryo_partner';
-    //    $condition="partner_id=$partner_id";
-
-    //    $effectrowsec=$this->home->updatedata($data,$condition);
-
-    //  redirect('Home/pendingVerification');
-    // }
-    // else{
-    // redirect('Home/pendingVerification');
-    // }
