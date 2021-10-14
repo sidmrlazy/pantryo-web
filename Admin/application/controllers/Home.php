@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends MY_Controller {
-    
-    public function __construct()
+class Home extends MY_Controller 
+{
+  public function __construct()
     {
        parent::__construct();
        $this->load->model('HomeModel','home');
@@ -40,22 +40,6 @@ class Home extends MY_Controller {
 
     // $data['order_details']=$this->home->get_all_data_bulk();
     $data['order_details'] = $this->home->gettodayorder();
-
-    //  print_r($data);exit;
-    // foreach($order_details as $details)
-    // {
-    //     $orderId=$details[0]->orderId;
-    //     $unit=$this->home->getquantityandunit($orderId);
-    //     // print_r($unit);
-    //     foreach($unit as $checkunit)
-    //     {
-    //         if($checkunit->productUnit == 'gm')
-    //         {
-    //         }
-    //     }
-    // }
-
-
     $this->pages('Dashboard/dashboard', $data);
   }
   public function showcustomer()
@@ -88,68 +72,67 @@ class Home extends MY_Controller {
   {
     echo "transfers";
     //    $this->pages('Navigation/transfers');
-   }
+  }
 
-   public function revenue()
-   {       
-       echo "revenue";
-       $this->pages('Navigation/revenue');
-   }
+  public function revenue()
+  {       
+      echo "revenue";
+      $this->pages('Navigation/revenue');
+  }
 
-   public function inventory()
-   {
-    //    echo "inventory";
-        $this->home->_table_name='pantryo_inventory';
-        $data['inventory']=$this->home->get_all_data_bulk();
-       $this->pages('Inventory/inventory',$data);
-   }
+  public function inventory()
+  {
+  //    echo "inventory";
+      $this->home->_table_name='pantryo_inventory';
+      $data['inventory']=$this->home->get_all_data_bulk();
+      $this->pages('Inventory/inventory',$data);
+  }
 
-   public function sendnotification()
-   {
-       $this->pages('Navigation/sendnotification');
-   }
+  public function sendnotification()
+  {
+      $this->pages('Navigation/sendnotification');
+  }
 
-   public function details()
-   {
-       echo "details";
-    //    $this->pages('Navigation/details');
-   }  
+  public function details()
+  {
+      echo "details";
+  //    $this->pages('Navigation/details');
+  }  
 
-   public function reviews()
-   { 
-       echo "reviews";
-    //    $this->pages('Navigation/reviews');
-   }  
+  public function reviews()
+  { 
+      echo "reviews";
+  //    $this->pages('Navigation/reviews');
+  }  
 
-   public function pendingVerification()
-   {
-    
+  public function pendingVerification()
+  {
+  
     //    echo "pendingVerification";
     $this->home->_table_name='pantryo_partner';
     $condition="partner_kycStatus=1";
     $data['details']=$this->home->get_all_data_bulk($condition);
     $this->pages('Shop/pendingVerification',$data);
-   
   }  
 
-   public function shopWiseSales() 
-   {
-       $this->home->_table_name='pantryo_partner';
-       $data['partner_details']=$this->home->get_all_data_bulk();
-       $this->pages('Shop/shopWiseSales',$data);
-   }  
+  public function shopWiseSales() 
+  {
+      $this->home->_table_name='pantryo_partner';
+      $data['partner_details']=$this->home->get_all_data_bulk();
+      $this->pages('Shop/shopWiseSales',$data);
+  }  
 
-   public function pendingDeliveryPartnerVerification()
-   {
-   
+  public function pendingDeliveryPartnerVerification()
+  {
+  
     $this->home->_table_name='pantryo_delivery_partner';
     $condition="userVerificationStatus=1";
     $data['delivery_details']=$this->home->get_all_data_bulk($condition);
     $this->pages('Delivery/pendingDeliveryPartnerVerification',$data);
-   }
+  }
 
-   public function pendingDelveryPartner($id)
-   {
+  public function pendingDelveryPartner($id)
+  {
        
         $delivery_id =base64_decode($id);
         $this->home->_table_name='pantryo_delivery_partner';
@@ -179,7 +162,8 @@ class Home extends MY_Controller {
            set_message($type,$message);
           redirect('Home/pendingDeliveryPartnerVerification');
         }
-        else{
+        else
+        {
             $type="error";
             $message="Something went Wrong";
             set_message($type,$message);
@@ -228,46 +212,46 @@ class Home extends MY_Controller {
    public function shopBlock()
    {
     
-    $this->home->_table_name='pantryo_partner';
-    $shop_id= base64_decode($this->uri->segment(3));
-    $partner_status=base64_decode($this->uri->segment(4));
-    $condition="partner_id=$shop_id";
-    if($partner_status==1)
-    {
-      $data=array(
-          'partner_status'=>2
-      );
-    }
-    else
-    {
-      $data=array(
-          'partner_status'=>1
-      );
-    }
-    $this->home->updatedata($data,$condition);
-    redirect('Home/showshop');   
+      $this->home->_table_name='pantryo_partner';
+      $shop_id= base64_decode($this->uri->segment(3));
+      $partner_status=base64_decode($this->uri->segment(4));
+      $condition="partner_id=$shop_id";
+      if($partner_status==1)
+      {
+        $data=array(
+            'partner_status'=>2
+        );
+      }
+      else
+      {
+        $data=array(
+            'partner_status'=>1
+        );
+      }
+      $this->home->updatedata($data,$condition);
+      redirect('Home/showshop');   
    }
 
    public function customerBlock()
    {
-    $this->home->_table_name='pantryo_customer';
-    $customer_id= base64_decode($this->uri->segment(3));
-    $customer_status=base64_decode($this->uri->segment(4));
-    $condition="customer_id=$customer_id";
-    if($customer_status==1)
-    {
-      $data=array(
-          'customer_status'=>2
-      );
-    }
-    else
-    {
-      $data=array(
-          'customer_status'=>1
-      );
-    }
-    $this->home->updatedata($data,$condition);
-    redirect('Home/showcustomer');   
+      $this->home->_table_name='pantryo_customer';
+      $customer_id= base64_decode($this->uri->segment(3));
+      $customer_status=base64_decode($this->uri->segment(4));
+      $condition="customer_id=$customer_id";
+      if($customer_status==1)
+      {
+        $data=array(
+            'customer_status'=>2
+        );
+      }
+      else
+      {
+        $data=array(
+            'customer_status'=>1
+        );
+      }
+      $this->home->updatedata($data,$condition);
+      redirect('Home/showcustomer');   
    }
 
    public function inventoryadd()
@@ -278,12 +262,12 @@ class Home extends MY_Controller {
    public function inventoryedit($idd)
    {
 
-    $id=base64_decode($idd);
-    $this->home->_table_name='pantryo_inventory';
+      $id=base64_decode($idd);
+      $this->home->_table_name='pantryo_inventory';
+    
+      $data['editinventory']=$this->home->editinventory($id);
   
-    $data['editinventory']=$this->home->editinventory($id);
- 
-    $this->pages('Inventory/editinventory',$data);
+      $this->pages('Inventory/editinventory',$data);
    }
 
    public function inventorydelete($idd)
@@ -573,7 +557,6 @@ class Home extends MY_Controller {
     
         $this->pages('Shop/pendingverifiyform',$data);
     }
-<<<<<<< HEAD
     public function partnerpendingfrom()
     {
         $partner_id=$this->input->post('partner_id');
@@ -593,79 +576,7 @@ class Home extends MY_Controller {
         $effectrowsec=$this->home->updatedata($data1,$condition);
 
             redirect('Home/pendingVerification');
-
-         // if(!empty($effectrow))
-         // {
-         //     $data=array(
-         //         'partner_kycStatus'=>'2'
-         //    );
-         //    $this->home->_table_name='pantryo_partner';
-         //    $condition="partner_id=$partner_id";
-            
-         //    $effectrowsec=$this->home->updatedata($data,$condition);
-
-         //  redirect('Home/pendingVerification');
-         // }
-         // else{
-         // redirect('Home/pendingVerification');
-         // }
  
-    }
+    } 
 
-  
 }
-=======
-  }
-
-  public function pendingVerificationshowform($id)
-  {
-    $partner_id = base64_decode($id);
-    $this->home->_table_name = 'pantryo_partner';
-    $condition = "partner_id =$partner_id";
-    $data['partner_details'] = $this->home->get_all_data_bulk($condition);
-
-    $this->home->_table_name = 'partner_registration_fee';
-    $condition1 = "partner_id ='P$partner_id'";
-    $data['partner_account'] = $this->home->get_all_data_bulk($condition1);
-
-
-    $this->pages('Shop/pendingverifiyform', $data);
-  }
-  public function partnerpendingfrom()
-  {
-    $partner_id = $this->input->post('partner_id');
-
-    $data = array(
-      'account_id' => $this->input->post('partnerAcountId')
-    );
-    $this->home->_table_name = 'partner_registration_fee';
-    $condition = "partner_id ='P$partner_id'";
-    $effectrow = $this->home->updatedata($data, $condition);
-
-    $data1 = array(
-      'partner_kycStatus' => '2'
-    );
-    $this->home->_table_name = 'pantryo_partner';
-    $condition = "partner_id=$partner_id";
-    $effectrowsec = $this->home->updatedata($data1, $condition);
-
-    redirect('Home/pendingVerification');
-  }
-}
-
-// if(!empty($effectrow))
-    // {
-    //     $data=array(
-    //         'partner_kycStatus'=>'2'
-    //    );
-    //    $this->home->_table_name='pantryo_partner';
-    //    $condition="partner_id=$partner_id";
-
-    //    $effectrowsec=$this->home->updatedata($data,$condition);
-
-    //  redirect('Home/pendingVerification');
-    // }
-    // else{
-    // redirect('Home/pendingVerification');
-    // }
->>>>>>> 07038bff6447ca10298542f8393b88410a408ebf
