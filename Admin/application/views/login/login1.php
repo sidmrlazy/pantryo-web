@@ -70,7 +70,7 @@
                 ?>
 
                 <h3 class="heading-login">LOGIN</h3>
-                <p class="caption-login"> login</p>
+                <!-- <p class="caption-login"> login</p> -->
                 <input type="text" name="uname" id="inputname" class="form-control form-group" placeholder="Admin ID" required autofocus>
                 <input type="password" name="password" id="inputPassword" class="form-control form-group" placeholder="Password" required autofocus>
                 <button class="btn btn-lg btn-primary btn-block btn-signin login-btn" type="submit">LOGIN</button>
