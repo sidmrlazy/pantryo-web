@@ -21,7 +21,7 @@ class Home extends MY_Controller
   public function index()
   {
     session_destroy();
-    $this->load->view('Login/login1');
+    $this->load->view('login/login1');
   }
 
   public function login()
