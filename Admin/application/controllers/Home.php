@@ -19,7 +19,7 @@ class Home extends MY_Controller
   //    set_message($type,$message);
   public function index()
   {
-    $this->load->view('Login/login');
+    $this->load->view('Login/login1');
   }
 
   public function login()
