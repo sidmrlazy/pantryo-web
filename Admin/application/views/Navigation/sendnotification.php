@@ -16,7 +16,7 @@
         </div>
 
         <div class="card-body">
-          <form class="row g-3" action="<?php echo base_url('Home/sendingnotification') ?>" method="post">
+          <form class="row g-3" action="<?php echo base_url('Home/sendingnotification') ?>" method="post" enctype="multipart/form-data">
             <div class="col-md-6 w-100">
               <label for="partner_category_id" class="form-label">Partner</label>
               <select class="form-control" name="partners" id="showtext">
@@ -48,10 +48,10 @@
               <textarea type="text" class="form-control" name="body" placeholder="Enter notification body"></textarea>
             </div>
 
-            <!-- <div class="col-md-12">
+            <div class="col-md-12">
               <label for="body" class="form-label">Image</label>
-              <input type="file" class="form-control" name="image">
-            </div> -->
+              <input type="file" class="form-control" name="file">
+            </div>
 
             <div class="col-md-6">
               <div class="row">

@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?php echo base_url('home/login') ?>">Home</a>
+                    <a class="nav-link" aria-current="page" href="<?php echo base_url('dashboard/login') ?>">Home</a>
                 </li>
                 <!-- ======== Business ======== -->
                 <li class="nav-item dropdown">

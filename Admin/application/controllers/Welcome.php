@@ -8,7 +8,7 @@ class Welcome extends CI_Controller
 		parent::__construct();
 		$this->load->model('LoginModel');
 		if ($this->LoginModel->loggedin() == TRUE) {
-			redirect('Home/login');
+			redirect('Dashboard/login');
 		}
 	}
 

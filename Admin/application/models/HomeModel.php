@@ -64,4 +64,19 @@ class HomeModel extends MY_Model
 			->get();
 		return $query->result();
 	}
+
+	public function view_inventory(){
+        $query = $this->db->query("SELECT sgh.inventory.id,
+                                    sgh.inventory.item_name,
+                                    sgh.inventory.price,
+                                    sgh.inventory.qty,
+                                    sgh.inventory.serial_number,
+                                    sgh.inventory.product_key,
+                                    sgh.employee.id,
+                                    sgh.employee.employee_name
+                                  FROM sgh.inventory,
+                                  sgh.employee WHERE sgh.inventory.employee_id=sgh.employee.id");
+        $item_data = $query->result_array();
+        return $item_data;
+    }
 }

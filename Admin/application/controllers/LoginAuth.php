@@ -20,7 +20,7 @@ class LoginAuth extends MY_Controller
 		$res = $this->LoginModel->checking($data);
 		// print_r($data);
 		if ($res == TRUE) {
-			redirect('Home/login');
+			redirect('Dashboard/login');
 		} else {
 			$this->session->set_flashdata('error', '<span style="color:red;">Mobile / Password combination does not exist</span>');
 			redirect('Welcome');

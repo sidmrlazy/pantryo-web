@@ -9,6 +9,8 @@ class Home extends MY_Controller
     $this->load->model('HomeModel', 'home');
     $this->load->model('LoginModel');
     $this->load->library('form_validation');
+    $this->load->helper(array('form','url'));
+    $this->load->library('validation');
     if ($this->LoginModel->loggedin() != true) {
       redirect('/');
     }
@@ -20,33 +22,18 @@ class Home extends MY_Controller
     $this->load->view('login/login1');
   }
 
-  public function login()
-  {
-    $today = strtotime('today');
-    $tomorrow = strtotime('tomorrow');
-    //customer count
-    $this->home->_table_name = 'pantryo_customer';
-    $data['customer_count'] = count($this->home->get_all_data_bulk());
-    //shop partner count
-    $this->home->_table_name = 'pantryo_partner';
-    $data['shopPartner_count'] = count($this->home->get_all_data_bulk());
-    //delivery partner count
-    $this->home->_table_name = 'pantryo_delivery_partner';
-    $data['deliveryPartner_count'] = count($this->home->get_all_data_bulk());
-
-    $this->home->_table_name = 'pantryo_cart_product';
-    $condition = "create_date > $today and create_date < $tomorrow";
-
-    // $data['order_details']=$this->home->get_all_data_bulk();
-    $data['order_details'] = $this->home->gettodayorder();
-    $this->pages('Dashboard/dashboard', $data);
-  }
   public function showcustomer()
   {
     $this->home->_table_name = 'pantryo_customer';
     $data['customer_details'] = $this->home->get_all_data_bulk();
     $this->pages('Customer/showcustomer', $data);
   }
+
+  
+
+
+
+  // Checked by Aamir till this line
   public function showdelivery()
   {
     $this->home->_table_name = 'pantryo_delivery_partner';
@@ -336,6 +323,290 @@ class Home extends MY_Controller
 
   }
 
+//   public function sendingnotification()
+//   {
+//     $partners = $this->input->post('partners');
+//     $usertype = $this->input->post('usertype');
+//     $mobilenumber = $this->input->post('mobilenumber');
+//     $title = $this->input->post('title');
+//     $body = $this->input->post('body');
+//     $image='https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg';
+//    // $filepath = "assets/images/notification_images/" . $_FILES["file"]["name"];
+//     //$image = "https://pantryo.in/assets/images/logo/PantryoLogo.png";
+//     if (!empty($partners)) 
+//     {
+//       if ($partners == 'allshop') 
+//       {
+//         $this->home->_table_name = 'pantryo_partner';
+//         $data = $this->home->get_all_data_bulk();
+//         foreach ($data as $row) 
+//         {
+//         $partner_token = $row->partner_token;
+//         $url = "https://fcm.googleapis.com/fcm/send";
+//         $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
+
+//         $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
+//         $arrayToSend = array('to' => $partner_token, 'notification' => $notification, 'priority' => 'high');
+//         $json = json_encode($arrayToSend);
+//         $headers = array();
+//         $headers[] = 'Content-Type: application/json';
+//         $headers[] = 'Authorization: key=' . $serverKey;
+//         $ch = curl_init();
+//         curl_setopt($ch, CURLOPT_URL, $url);
+//         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+//         curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+//         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//         //Send the request
+//         $response = curl_exec($ch);
+//         //Close request
+//         if ($response === FALSE) 
+//         {
+//           die('FCM Send Error: ' . curl_error($ch));
+//         }
+//       }
+//       curl_close($ch);
+//     }
+//     redirect('home/sendnotification');
+//   } 
+//   elseif ($partners == 'alldelivery')
+//   {
+//     $this->home->_table_name = 'pantryo_delivery_partner';
+//     $data = $this->home->get_all_data_bulk();
+//     foreach ($data as $row)
+//     $user_token = $row->userToken;
+//     {
+//     $url = "https://fcm.googleapis.com/fcm/send";
+//     $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
+//     $title = "New Notification";
+//     $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
+//     $notification = array(
+//         'title' => $title,
+//         'body' => $body,
+//         'vibrate' => "1",
+//         'badge' => '1',
+//         'sound' => 'default',
+//         'foreground' => true,
+//         'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+//     );
+//     $arrayToSend = array(
+//         'to' => $user_token,
+//         'data' => $notification,
+//         'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+//         'notification' => $notification,
+//         'priority' => 'high',
+//         'sound' => 'default',
+//     );
+//     $json = json_encode($arrayToSend);
+//     $headers = array();
+//     $headers[] = 'Content-Type: application/json';
+//     $headers[] = 'Authorization: key=' . $serverKey;
+//     $ch = curl_init();
+//     curl_setopt($ch, CURLOPT_URL, $url);
+//     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+//     curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+//     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//     $response = curl_exec($ch);
+//     curl_close($ch);
+//     //return $response;
+//       //return $response;
+//       if ($response === FALSE) 
+//       {
+//         die('FCM Send Error: ' . curl_error($ch));
+//       }
+//         curl_close($ch);
+//         redirect('home/sendnotification');
+//     } 
+//   }
+//   elseif ($partners == 'allcustomer') 
+//   {
+//     $this->home->_table_name = 'pantryo_customer';
+//     $data = $this->home->get_all_data_bulk();
+//     foreach ($data as $row) 
+//     {
+//       $user_token = $row->user_token;
+//       $url = "https://fcm.googleapis.com/fcm/send";
+//       // $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
+
+//       $serverKey = 'AAAAIIoSzdk:APA91bFqAg9Vu4T-_LYX5EPz9UVtqZTp0bRWOpkJLgm6GqIf4QAJtrW6RISmqWHZl6T-ykQrNLpo39kbRHLBsfGmqyz5JP8hxNCUzrfw8ECkcOItsO173OGeIrPf01_jiTLGjJsgwr33';
+
+//       $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
+//       $arrayToSend = array('to' => $user_token, 'notification' => $notification, 'priority' => 'high');
+//       $json = json_encode($arrayToSend);
+//       $headers = array();
+//       $headers[] = 'Content-Type: application/json';
+//       $headers[] = 'Authorization: key=' . $serverKey;
+//       $ch = curl_init();
+//       curl_setopt($ch, CURLOPT_URL, $url);
+//       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+//       curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+//       curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//       //Send the request
+//       $response = curl_exec($ch);
+//       //Close request
+//       if ($response === FALSE) 
+//       {
+//         die('FCM Send Error: ' . curl_error($ch));
+//       }
+//         curl_close($ch);
+//         redirect('home/sendnotification');
+//     }
+//   } 
+//   elseif (!empty($mobilenumber) && ($usertype == 'customer'))
+//   {
+//     $this->home->_table_name = 'pantryo_partner';
+//     $condition = "mobilenumber='$mobilenumber'";
+//     $data = $this->home->get_all_data_bulk($condition);
+
+//     foreach ($data as $row) 
+//     {
+
+//       $user_token = $row->userToken;
+//       $url = "https://fcm.googleapis.com/fcm/send";
+
+//       $serverKey = 'AAAAIIoSzdk:APA91bFqAg9Vu4T-_LYX5EPz9UVtqZTp0bRWOpkJLgm6GqIf4QAJtrW6RISmqWHZl6T-ykQrNLpo39kbRHLBsfGmqyz5JP8hxNCUzrfw8ECkcOItsO173OGeIrPf01_jiTLGjJsgwr33';
+
+//       $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
+//       $arrayToSend = array('to' => $user_token, 'notification' => $notification, 'priority' => 'high');
+//       $json = json_encode($arrayToSend);
+//       $headers = array();
+//       $headers[] = 'Content-Type: application/json';
+//       $headers[] = 'Authorization: key=' . $serverKey;
+//       $ch = curl_init();
+//       curl_setopt($ch, CURLOPT_URL, $url);
+//       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+//       curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+//       curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//       //Send the request
+//       $response = curl_exec($ch);
+//       //Close request
+//       if ($response === FALSE) 
+//       {
+//         die('FCM Send Error: ' . curl_error($ch));
+//       }
+//       curl_close($ch);
+//       redirect('home/sendnotification');
+//     }
+//   } 
+//   elseif (!empty($mobilenumber) && ($usertype == 'shop') || ($usertype == 'partner')) 
+//   {
+//     $this->home->_table_name = 'pantryo_partner';
+//     $condition = "mobilenumber='$mobilenumber'";
+//     $data = $this->home->get_all_data_bulk($condition);
+
+//     foreach ($data as $row) 
+//     {
+
+//       $user_token = $row->user_token;
+//       $url = "https://fcm.googleapis.com/fcm/send";
+
+//       $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
+
+//       $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
+//       $arrayToSend = array('to' => $user_token, 'notification' => $notification, 'priority' => 'high');
+//       $json = json_encode($arrayToSend);
+//       $headers = array();
+//       $headers[] = 'Content-Type: application/json';
+//       $headers[] = 'Authorization: key=' . $serverKey;
+//       $ch = curl_init();
+//       curl_setopt($ch, CURLOPT_URL, $url);
+//       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+//       curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+//       curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//       //Send the request
+//       $response = curl_exec($ch);
+//       //Close request
+//       if ($response === FALSE) 
+//       {
+//         die('FCM Send Error: ' . curl_error($ch));
+//       }
+//       curl_close($ch);
+//       redirect('home/sendnotification');
+//     }
+//   } 
+//   else 
+//   {
+//     echo "error";
+//   }
+// }
+//   public function pendingVerificationshowform($id)
+//   {
+//     $partner_id = base64_decode($id);
+//     $this->home->_table_name = 'pantryo_partner';
+//     $condition = "partner_id =$partner_id";
+//     $data['partner_details'] = $this->home->get_all_data_bulk($condition);
+
+//     $this->home->_table_name = 'partner_registration_fee';
+//     $condition1 = "partner_id ='P$partner_id'";
+
+//     $data['partner_account'] = $this->home->get_all_data_bulk($condition1);
+
+//     $this->pages('Shop/pendingverifiyform', $data);
+//   }
+//   public function partnerpendingfrom()
+//   {
+//     $partner_id = $this->input->post('partner_id');
+
+//     $data = array(
+//       'account_id' => $this->input->post('partnerAcountId')
+//     );
+//     $this->home->_table_name = 'partner_registration_fee';
+//     $condition = "partner_id ='P$partner_id'";
+//     $effectrow = $this->home->updatedata($data, $condition);
+
+//     $data1 = array(
+//       'partner_kycStatus' => '2'
+//     );
+//     $this->home->_table_name = 'pantryo_partner';
+//     $condition = "partner_id=$partner_id";
+//     $effectrowsec = $this->home->updatedata($data1, $condition);
+//   }
+
+
+   function sendPushNotification()
+  {
+    $user_token=1;
+    $this->home->_table_name = 'pantryo_delivery_partner';
+    $data = $this->home->get_all_data_bulk();
+    foreach ($data as $row)
+    $user_token = $row->userToken;
+    {
+      $url = "https://fcm.googleapis.com/fcm/send";
+      $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
+      $title = "New Notification";
+      $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
+      $notification = array(
+        'title' => $title,
+        'body' => $body,
+        'vibrate' => "1",
+        'badge' => '1',
+        'sound' => 'default',
+        'foreground' => true,
+        'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+        );
+      $arrayToSend = array(
+        'to' => $user_token,
+        'data' => $notification,
+        'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+        'notification' => $notification,
+        'priority' => 'high',
+        'sound' => 'default',
+        );
+      $json = json_encode($arrayToSend);
+      $headers = array();
+      $headers[] = 'Content-Type: application/json';
+      $headers[] = 'Authorization: key=' . $serverKey;
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, $url);
+      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+      $response = curl_exec($ch);
+      curl_close($ch);
+      return $response;
+    }
+  }
+
+
   public function sendingnotification()
   {
     $partners = $this->input->post('partners');
@@ -343,225 +614,99 @@ class Home extends MY_Controller
     $mobilenumber = $this->input->post('mobilenumber');
     $title = $this->input->post('title');
     $body = $this->input->post('body');
-    $image = $this->input->post('image');
-    if (!empty($partners)) {
-      if ($partners == 'allshop') {
-        $this->home->_table_name = 'pantryo_partner';
-        $data = $this->home->get_all_data_bulk();
-        foreach ($data as $row) {
-          $partner_token = $row->partner_token;
-          $url = "https://fcm.googleapis.com/fcm/send";
-          $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
 
-          $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
-          $arrayToSend = array('to' => $partner_token, 'notification' => $notification, 'priority' => 'high');
-          $json = json_encode($arrayToSend);
-          $headers = array();
-          $headers[] = 'Content-Type: application/json';
-          $headers[] = 'Authorization: key=' . $serverKey;
-          $ch = curl_init();
-          curl_setopt($ch, CURLOPT_URL, $url);
-          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-          curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-          //Send the request
-          $response = curl_exec($ch);
-          //Close request
-          if ($response === FALSE) {
-            die('FCM Send Error: ' . curl_error($ch));
+        //image start
+        $imageNewName = $_FILES['image']['name'];
+        $config['upload_path'] = './assets/images/notification_images/'; /* NB! create this dir! */
+        $config['allowed_types'] = 'jpg|jpeg|png|pjpeg|x-png|X-PNG|gif';
+        $config['max_size']  = '2048';
+        $config['file_name']  = $imageNewName;
+        $config['remove_spaces']  = TRUE;
+
+        /* Load the upload library */
+        $this->load->library('upload', $config);
+        $upload = $this->upload->do_upload('image');
+          if ($upload) 
+          {
+            ?>
+            <script type="text/javascript" language="javascript">
+            window.parent.setUploadedImage('<?php echo $imageNewName; ?>','<?php echo $this->config->item('base_url').'assets/images/notification_images/'.$imageNewName?>', '<?php echo $file_temp_name?>', '<?php echo $div_id?>');
+            </script>
+            <?php
           }
-          curl_close($ch);
-        }
-        redirect('home/sendnotification');
-      } elseif ($partners == 'alldelivery') {
-        $this->home->_table_name = 'pantryo_delivery_partner';
-        $data = $this->home->get_all_data_bulk();
-        foreach ($data as $row) {
-          $userToken=$row->userToken;
-          $url = "https://fcm.googleapis.com/fcm/send";
-          $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
-          $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
-          $arrayToSend = array('to' => $userToken, 'notification' => $notification, 'priority' => 'high');
-          $json = json_encode($arrayToSend);
-          $headers = array();
-          $headers[] = 'Content-Type: application/json';
-          $headers[] = 'Authorization: key=' . $serverKey;
-          $ch = curl_init();
-          curl_setopt($ch, CURLOPT_URL, $url);
-          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-          curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-          //Send the request
-          $response = curl_exec($ch);
-        }
-        redirect('home/sendnotification');
-          //Close request
-          if ($response === FALSE) {
-            die('FCM Send Error: ' . curl_error($ch));
+          else 
+          {
+            ?>
+            <script type="text/javascript" language="javascript">
+            alert('<?php echo $this->upload->display_errors();?>');
+            </script>
+            <?php
           }
-          curl_close($ch);
-          
         
-      } elseif ($partners == 'allcustomer') {
-        $this->home->_table_name = 'pantryo_customer';
-        $data = $this->home->get_all_data_bulk();
-        foreach ($data as $row) {
+          ?>
 
-          $user_token = $row->user_token;
-          $url = "https://fcm.googleapis.com/fcm/send";
+
+
+<?php
+
+//$this->load->view('uploading_interface');
+// image end
+
+    $image = 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg';
+
+    if (!empty($partners)) 
+    {
+    if ($partners == 'alldelivery')
+    {
+        $this->home->_table_name = 'pantryo_delivery_partner';
+         $data = $this->home->get_all_data_bulk();
+         foreach ($data as $row)
+        {
+          $user_token = $row->userToken;
+          
+          // $url = "https://fcm.googleapis.com/fcm/send";
           // $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
-
-          $serverKey = 'AAAAIIoSzdk:APA91bFqAg9Vu4T-_LYX5EPz9UVtqZTp0bRWOpkJLgm6GqIf4QAJtrW6RISmqWHZl6T-ykQrNLpo39kbRHLBsfGmqyz5JP8hxNCUzrfw8ECkcOItsO173OGeIrPf01_jiTLGjJsgwr33';
-
-          $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
-          $arrayToSend = array('to' => $user_token, 'notification' => $notification, 'priority' => 'high');
-          $json = json_encode($arrayToSend);
-          $headers = array();
-          $headers[] = 'Content-Type: application/json';
-          $headers[] = 'Authorization: key=' . $serverKey;
-          $ch = curl_init();
-          curl_setopt($ch, CURLOPT_URL, $url);
-          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-          curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-          //Send the request
-          $response = curl_exec($ch);
-          //Close request
-          if ($response === FALSE) {
-            die('FCM Send Error: ' . curl_error($ch));
-          }
-          curl_close($ch);
-          redirect('home/sendnotification');
+          // $notification = array(
+          // 'title' => $title,
+          // 'body' => $body,
+          // 'vibrate' => "1",
+          // 'badge' => '1',
+          // 'sound' => 'default',
+          // 'foreground' => true,
+          // 'image' => $image,
+          // );
+          // $arrayToSend = array(
+          // 'to' => $user_token,
+          // 'data' => $notification,
+          // 'image' => $image,
+          // 'notification' => $notification,
+          // 'priority' => 'high',
+          // 'sound' => 'default',
+          // );
+          // $json = json_encode($arrayToSend);
+          // $headers = array();
+          // $headers[] = 'Content-Type: application/json';
+          // $headers[] = 'Authorization: key=' . $serverKey;
+          // $ch = curl_init();
+          // curl_setopt($ch, CURLOPT_URL, $url);
+          // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+          // curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+          // curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+          // $response = curl_exec($ch);
+          // //curl_close($ch);
         }
+        echo $title;
+        echo $body;
+        echo "<img src= $image>";
+        exit();
+        //return $response;
+          // if ($response === FALSE) 
+          // {
+          //   die('FCM Send Error: ' . curl_error($ch));
+          // }
+          //   curl_close($ch);
+            redirect('home/sendnotification');
+       }
       }
-    } elseif (!empty($mobilenumber) && ($usertype == 'customer')) {
-      $this->home->_table_name = 'pantryo_partner';
-      $condition = "mobilenumber='$mobilenumber'";
-      $data = $this->home->get_all_data_bulk($condition);
-
-      foreach ($data as $row) {
-
-        $user_token = $row->user_token;
-        $url = "https://fcm.googleapis.com/fcm/send";
-
-        $serverKey = 'AAAAIIoSzdk:APA91bFqAg9Vu4T-_LYX5EPz9UVtqZTp0bRWOpkJLgm6GqIf4QAJtrW6RISmqWHZl6T-ykQrNLpo39kbRHLBsfGmqyz5JP8hxNCUzrfw8ECkcOItsO173OGeIrPf01_jiTLGjJsgwr33';
-
-        $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
-        $arrayToSend = array('to' => $user_token, 'notification' => $notification, 'priority' => 'high');
-        $json = json_encode($arrayToSend);
-        $headers = array();
-        $headers[] = 'Content-Type: application/json';
-        $headers[] = 'Authorization: key=' . $serverKey;
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        //Send the request
-        $response = curl_exec($ch);
-        //Close request
-        if ($response === FALSE) {
-          die('FCM Send Error: ' . curl_error($ch));
-        }
-        curl_close($ch);
-        redirect('home/sendnotification');
-      }
-    } elseif (!empty($mobilenumber) && ($usertype == 'shop') || ($usertype == 'partner')) {
-      $this->home->_table_name = 'pantryo_partner';
-      $condition = "mobilenumber='$mobilenumber'";
-      $data = $this->home->get_all_data_bulk($condition);
-
-      foreach ($data as $row) {
-
-        $user_token = $row->user_token;
-        $url = "https://fcm.googleapis.com/fcm/send";
-
-        $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
-
-        $notification = array('title' => $title, 'body' => $body, 'sound' => 'default', 'badge' => '1');
-        $arrayToSend = array('to' => $user_token, 'notification' => $notification, 'priority' => 'high');
-        $json = json_encode($arrayToSend);
-        $headers = array();
-        $headers[] = 'Content-Type: application/json';
-        $headers[] = 'Authorization: key=' . $serverKey;
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        //Send the request
-        $response = curl_exec($ch);
-        //Close request
-        if ($response === FALSE) {
-          die('FCM Send Error: ' . curl_error($ch));
-        }
-        curl_close($ch);
-        redirect('home/sendnotification');
-      }
-    } else {
-    }
-  }
-
-  public function pendingVerificationshowform($id)
-  {
-    $partner_id = base64_decode($id);
-    $this->home->_table_name = 'pantryo_partner';
-    $condition = "partner_id =$partner_id";
-    $data['partner_details'] = $this->home->get_all_data_bulk($condition);
-
-    $this->home->_table_name = 'partner_registration_fee';
-    $condition1 = "partner_id ='P$partner_id'";
-    $data['partner_account'] = $this->home->get_all_data_bulk($condition1);
-
-
-    $this->pages('Shop/pendingverifiyform', $data);
-  }
-  public function partnerpendingfrom()
-  {
-    $partner_id = $this->input->post('partner_id');
-
-    $data = array(
-      'account_id' => $this->input->post('partnerAcountId')
-    );
-    $this->home->_table_name = 'partner_registration_fee';
-    $condition = "partner_id ='P$partner_id'";
-    $effectrow = $this->home->updatedata($data, $condition);
-
-    $data1 = array(
-      'partner_kycStatus' => '2'
-    );
-    $this->home->_table_name = 'pantryo_partner';
-    $condition = "partner_id=$partner_id";
-    $effectrowsec = $this->home->updatedata($data1, $condition);
-  }
-
-
-    public function notificationtest()
-   {
-      $title="Test Title";
-      $body="Test body description";
-           $partner_token="forAstMHQ8ycef7_DF_Q7X:APA91bGaIdy9QAswHoJLWVUM53q69nvj6i1mE8CgkIPuYGqhE4RsagASfNsrMnBXXHNXSA6Hy220rr5kTTraR6znFh7cx3YyocHF-UxbpXpysKtv396WXzYHVNRZijq7TDaT7Z_PNPMV";
-           $url = "https://fcm.googleapis.com/fcm/send";
-           $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
-           
-           $notification = array('title' =>$title , 'body' => $body, 'sound' => 'default', 'badge' => '1');
-           $arrayToSend = array('to' => $partner_token, 'notification' => $notification,'priority'=>'high');
-           $json = json_encode($arrayToSend);
-           $headers = array();
-           $headers[] = 'Content-Type: application/json';
-           $headers[] = 'Authorization: key='. $serverKey;
-           $ch = curl_init();
-           curl_setopt($ch, CURLOPT_URL, $url);
-           curl_setopt($ch, CURLOPT_CUSTOMREQUEST,"POST");
-           curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-           curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);
-           //Send the request
-           $response = curl_exec($ch);
-           //Close request
-            if ($response === FALSE) 
-            {
-            die('FCM Send Error: ' . curl_error($ch));
-            }
-            curl_close($ch);
    }
 }

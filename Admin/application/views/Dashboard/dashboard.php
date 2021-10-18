@@ -28,6 +28,70 @@
       </a>
     </div>
 
+
+    <div class="col-sm-4">
+      <a style="text-decoration: none;" href="<?php echo base_url('Home/todaysearning') ?>">
+        <div class="card mt-2 borderradius">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12 d-flex justify-content-start align-items-center">
+                <img src="<?php echo base_url() ?>assets/logo/PantryoLogo2.png" class="imageheight" />
+
+                <span class="dashboardspan">
+                  <h6>Daily Earning</h6>
+
+                  <?php
+                  if (!empty($total_amount)) {
+                    foreach($this->a->login() as $row)
+                    {
+                    echo $row->total_amount;
+                    }
+                  } else {
+                    echo "00";
+                  }
+                  ?>
+
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <div class="col-sm-4">
+      <a style="text-decoration: none;" href="<?php echo base_url('Home/monthlyearning') ?>">
+        <div class="card mt-2 borderradius">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12 d-flex justify-content-start align-items-center">
+                <img src="<?php echo base_url() ?>assets/logo/PantryoLogo2.png" class="imageheight" />
+
+                <span class="dashboardspan">
+                  <h6>Monthly Earning</h6>
+
+                  <?php
+                  if (!empty($monthly_earning_count)) {
+                    echo $monthly_earning_count;
+                  } else {
+                    echo "00";
+                  }
+                  ?>
+
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+  <div class="row mt-5">
+  <h1>PantrYo Shops</h1>
     <div class="col-sm-4">
       <a style="text-decoration: none;" href="<?php echo base_url('Home/showshop') ?>">
         <div class="card mt-2 borderradius">
@@ -36,7 +100,7 @@
               <div class="col-sm-12 d-flex justify-content-start align-items-center">
                 <img src="<?php echo base_url() ?>assets/logo/partner.png" class="imageheight" />
                 <span class="dashboardspan">
-                  <h6>Shops</h6>
+                  <h6>Unverified Shops</h6>
                   <?php
                   if (!empty($shopPartner_count)) {
                     echo $shopPartner_count;
@@ -52,7 +116,33 @@
       </a>
     </div>
 
+    <div class="col-sm-4">
+      <a style="text-decoration: none;" href="<?php echo base_url('Home/showshop') ?>">
+        <div class="card mt-2 borderradius">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12 d-flex justify-content-start align-items-center">
+                <img src="<?php echo base_url() ?>assets/logo/partner.png" class="imageheight" />
+                <span class="dashboardspan">
+                  <h6>Verified Shops</h6>
+                  <?php
+                  if (!empty($shopPartner_count)) {
+                    echo $shopPartner_count;
+                  } else {
+                    echo "00";
+                  }
+                  ?>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 
+  <div class="row mt-5">
+  <h1>PantrYo Delivery Partners</h1>
     <div class="col-sm-4">
       <a style="text-decoration: none;" href="<?php echo base_url('Home/showdelivery') ?>">
         <div class="card mt-2 borderradius">
@@ -61,7 +151,7 @@
               <div class="col-sm-12 d-flex justify-content-start align-items-center">
                 <img src="<?php echo base_url() ?>assets/logo/PantryoDelivery.png" class="imageheight" />
                 <span class="dashboardspan">
-                  <h6>Partners</h6>
+                  <h6>Verified Partners</h6>
                   <?php
                   if (!empty($deliveryPartner_count)) {
                     echo $deliveryPartner_count;
@@ -76,7 +166,33 @@
         </div>
       </a>
     </div>
+
+    <div class="col-sm-4">
+      <a style="text-decoration: none;" href="<?php echo base_url('Home/showdelivery') ?>">
+        <div class="card mt-2 borderradius">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12 d-flex justify-content-start align-items-center">
+                <img src="<?php echo base_url() ?>assets/logo/PantryoDelivery.png" class="imageheight" />
+                <span class="dashboardspan">
+                  <h6>Unverified Partners</h6>
+                  <?php
+                  if (!empty($deliveryPartner_count)) {
+                    echo $deliveryPartner_count;
+                  } else {
+                    echo "00";
+                  }
+                  ?>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
   </div>
+
 </div>
 
 <div class="container mb-5">
