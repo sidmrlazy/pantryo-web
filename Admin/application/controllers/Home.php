@@ -321,6 +321,118 @@ class Home extends MY_Controller
 
   }
 
+   function sendPushNotification()
+  {
+    $user_token=1;
+    $this->home->_table_name = 'pantryo_delivery_partner';
+    $data = $this->home->get_all_data_bulk();
+    foreach ($data as $row)
+    $user_token = $row->userToken;
+    {
+      $url = "https://fcm.googleapis.com/fcm/send";
+      $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
+      $title = "New Notification";
+      $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
+      $notification = array(
+        'title' => $title,
+        'body' => $body,
+        'vibrate' => "1",
+        'badge' => '1',
+        'sound' => 'default',
+        'foreground' => true,
+        'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+        );
+      $arrayToSend = array(
+        'to' => $user_token,
+        'data' => $notification,
+        'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+        'notification' => $notification,
+        'priority' => 'high',
+        'sound' => 'default',
+        );
+      $json = json_encode($arrayToSend);
+      $headers = array();
+      $headers[] = 'Content-Type: application/json';
+      $headers[] = 'Authorization: key=' . $serverKey;
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, $url);
+      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+      $response = curl_exec($ch);
+      curl_close($ch);
+      return $response;
+    }
+  }
+
+
+  public function sendingnotification()
+  {
+    $partners = $this->input->post('partners');
+    $usertype = $this->input->post('usertype');
+    $mobilenumber = $this->input->post('mobilenumber');
+    $title = $this->input->post('title');
+    $body = $this->input->post('body');
+    // $image='https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg';
+
+    if (!empty($partners)) 
+    {
+    if ($partners == 'alldelivery')
+    {
+        $this->home->_table_name = 'pantryo_delivery_partner';
+         $data = $this->home->get_all_data_bulk();
+         foreach ($data as $row)
+        {
+          $user_token = $row->userToken;
+          
+          $url = "https://fcm.googleapis.com/fcm/send";
+          $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
+          //$title = "New Notification";
+         // $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
+          $notification = array(
+          'title' => $title,
+          'body' => $body,
+          'vibrate' => "1",
+          'badge' => '1',
+          'sound' => 'default',
+          'foreground' => true,
+          'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+          );
+          $arrayToSend = array(
+          'to' => $user_token,
+          'data' => $notification,
+          'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+          'notification' => $notification,
+          'priority' => 'high',
+          'sound' => 'default',
+          );
+          $json = json_encode($arrayToSend);
+          $headers = array();
+          $headers[] = 'Content-Type: application/json';
+          $headers[] = 'Authorization: key=' . $serverKey;
+          $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+          curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+          $response = curl_exec($ch);
+          //curl_close($ch);
+        }
+        //return $response;
+          if ($response === FALSE) 
+          {
+            die('FCM Send Error: ' . curl_error($ch));
+          }
+            curl_close($ch);
+            redirect('home/sendnotification');
+       }
+      }
+   }
+}
+
+
+
+
 //   public function sendingnotification()
 //   {
 //     $partners = $this->input->post('partners');
@@ -558,113 +670,3 @@ class Home extends MY_Controller
 //     $condition = "partner_id=$partner_id";
 //     $effectrowsec = $this->home->updatedata($data1, $condition);
 //   }
-
-
-   function sendPushNotification()
-  {
-    $user_token=1;
-    $this->home->_table_name = 'pantryo_delivery_partner';
-    $data = $this->home->get_all_data_bulk();
-    foreach ($data as $row)
-    $user_token = $row->userToken;
-    {
-      $url = "https://fcm.googleapis.com/fcm/send";
-      $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
-      $title = "New Notification";
-      $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
-      $notification = array(
-        'title' => $title,
-        'body' => $body,
-        'vibrate' => "1",
-        'badge' => '1',
-        'sound' => 'default',
-        'foreground' => true,
-        'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
-        );
-      $arrayToSend = array(
-        'to' => $user_token,
-        'data' => $notification,
-        'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
-        'notification' => $notification,
-        'priority' => 'high',
-        'sound' => 'default',
-        );
-      $json = json_encode($arrayToSend);
-      $headers = array();
-      $headers[] = 'Content-Type: application/json';
-      $headers[] = 'Authorization: key=' . $serverKey;
-      $ch = curl_init();
-      curl_setopt($ch, CURLOPT_URL, $url);
-      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-      $response = curl_exec($ch);
-      curl_close($ch);
-      return $response;
-    }
-  }
-
-
-  public function sendingnotification()
-  {
-    $partners = $this->input->post('partners');
-    $usertype = $this->input->post('usertype');
-    $mobilenumber = $this->input->post('mobilenumber');
-    $title = $this->input->post('title');
-    $body = $this->input->post('body');
-    // $image='https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg';
-
-    if (!empty($partners)) 
-    {
-    if ($partners == 'alldelivery')
-    {
-        $this->home->_table_name = 'pantryo_delivery_partner';
-         $data = $this->home->get_all_data_bulk();
-         foreach ($data as $row)
-        {
-          $user_token = $row->userToken;
-          
-          $url = "https://fcm.googleapis.com/fcm/send";
-          $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
-          //$title = "New Notification";
-         // $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
-          $notification = array(
-          'title' => $title,
-          'body' => $body,
-          'vibrate' => "1",
-          'badge' => '1',
-          'sound' => 'default',
-          'foreground' => true,
-          'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
-          );
-          $arrayToSend = array(
-          'to' => $user_token,
-          'data' => $notification,
-          'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
-          'notification' => $notification,
-          'priority' => 'high',
-          'sound' => 'default',
-          );
-          $json = json_encode($arrayToSend);
-          $headers = array();
-          $headers[] = 'Content-Type: application/json';
-          $headers[] = 'Authorization: key=' . $serverKey;
-          $ch = curl_init();
-          curl_setopt($ch, CURLOPT_URL, $url);
-          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-          curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-          $response = curl_exec($ch);
-          //curl_close($ch);
-        }
-        //return $response;
-          if ($response === FALSE) 
-          {
-            die('FCM Send Error: ' . curl_error($ch));
-          }
-            curl_close($ch);
-            redirect('home/sendnotification');
-       }
-      }
-   }
-}
