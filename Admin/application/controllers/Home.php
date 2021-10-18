@@ -10,7 +10,6 @@ class Home extends MY_Controller
     $this->load->model('LoginModel');
     $this->load->library('form_validation');
     $this->load->helper(array('form','url'));
-    $this->load->library('validation');
     if ($this->LoginModel->loggedin() != true) {
       redirect('/');
     }
