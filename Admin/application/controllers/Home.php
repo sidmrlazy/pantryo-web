@@ -9,7 +9,6 @@ class Home extends MY_Controller
     $this->load->model('HomeModel', 'home');
     $this->load->model('LoginModel');
     $this->load->library('form_validation');
-    $this->load->helper(array('form','url'));
     if ($this->LoginModel->loggedin() != true) {
       redirect('/');
     }
@@ -613,45 +612,7 @@ class Home extends MY_Controller
     $mobilenumber = $this->input->post('mobilenumber');
     $title = $this->input->post('title');
     $body = $this->input->post('body');
-
-        //image start
-        $imageNewName = $_FILES['image']['name'];
-        $config['upload_path'] = './assets/images/notification_images/'; /* NB! create this dir! */
-        $config['allowed_types'] = 'jpg|jpeg|png|pjpeg|x-png|X-PNG|gif';
-        $config['max_size']  = '2048';
-        $config['file_name']  = $imageNewName;
-        $config['remove_spaces']  = TRUE;
-
-        /* Load the upload library */
-        $this->load->library('upload', $config);
-        $upload = $this->upload->do_upload('image');
-          if ($upload) 
-          {
-            ?>
-            <script type="text/javascript" language="javascript">
-            window.parent.setUploadedImage('<?php echo $imageNewName; ?>','<?php echo $this->config->item('base_url').'assets/images/notification_images/'.$imageNewName?>', '<?php echo $file_temp_name?>', '<?php echo $div_id?>');
-            </script>
-            <?php
-          }
-          else 
-          {
-            ?>
-            <script type="text/javascript" language="javascript">
-            alert('<?php echo $this->upload->display_errors();?>');
-            </script>
-            <?php
-          }
-        
-          ?>
-
-
-
-<?php
-
-//$this->load->view('uploading_interface');
-// image end
-
-    $image = 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg';
+    // $image='https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg';
 
     if (!empty($partners)) 
     {
@@ -663,47 +624,45 @@ class Home extends MY_Controller
         {
           $user_token = $row->userToken;
           
-          // $url = "https://fcm.googleapis.com/fcm/send";
-          // $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
-          // $notification = array(
-          // 'title' => $title,
-          // 'body' => $body,
-          // 'vibrate' => "1",
-          // 'badge' => '1',
-          // 'sound' => 'default',
-          // 'foreground' => true,
-          // 'image' => $image,
-          // );
-          // $arrayToSend = array(
-          // 'to' => $user_token,
-          // 'data' => $notification,
-          // 'image' => $image,
-          // 'notification' => $notification,
-          // 'priority' => 'high',
-          // 'sound' => 'default',
-          // );
-          // $json = json_encode($arrayToSend);
-          // $headers = array();
-          // $headers[] = 'Content-Type: application/json';
-          // $headers[] = 'Authorization: key=' . $serverKey;
-          // $ch = curl_init();
-          // curl_setopt($ch, CURLOPT_URL, $url);
-          // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-          // curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-          // curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-          // $response = curl_exec($ch);
-          // //curl_close($ch);
+          $url = "https://fcm.googleapis.com/fcm/send";
+          $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
+          //$title = "New Notification";
+         // $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
+          $notification = array(
+          'title' => $title,
+          'body' => $body,
+          'vibrate' => "1",
+          'badge' => '1',
+          'sound' => 'default',
+          'foreground' => true,
+          'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+          );
+          $arrayToSend = array(
+          'to' => $user_token,
+          'data' => $notification,
+          'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+          'notification' => $notification,
+          'priority' => 'high',
+          'sound' => 'default',
+          );
+          $json = json_encode($arrayToSend);
+          $headers = array();
+          $headers[] = 'Content-Type: application/json';
+          $headers[] = 'Authorization: key=' . $serverKey;
+          $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+          curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+          $response = curl_exec($ch);
+          //curl_close($ch);
         }
-        echo $title;
-        echo $body;
-        echo "<img src= $image>";
-        exit();
         //return $response;
-          // if ($response === FALSE) 
-          // {
-          //   die('FCM Send Error: ' . curl_error($ch));
-          // }
-          //   curl_close($ch);
+          if ($response === FALSE) 
+          {
+            die('FCM Send Error: ' . curl_error($ch));
+          }
+            curl_close($ch);
             redirect('home/sendnotification');
        }
       }
