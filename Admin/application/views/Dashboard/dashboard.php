@@ -140,7 +140,7 @@
     </div>
   </div>
 
-  <div class="row mt-5">
+  <div class="row mt-5 dashboard-headings">
     <h1>PantrYo Delivery Partners</h1>
     <div class="col-sm-4">
       <a style="text-decoration: none;" href="<?php echo base_url('Home/showdelivery') ?>">
@@ -197,7 +197,8 @@
 <div class="container mb-5">
   <div class="orders">
     <div class="orders-header mb-4">
-      <p>Ongoing Orders</p>
+      <p>Ongoing Orders (Today)</p>
+
     </div>
     <div class="table-responsive mt-5">
       <table id="table_id" class="display" style="width:100%">

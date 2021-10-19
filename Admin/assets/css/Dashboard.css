@@ -1,3 +1,5 @@
 .dashboard-headings h1 {
 	font-size: 16px !important;
+	font-weight: bolder;
+	color: #777;
 }
