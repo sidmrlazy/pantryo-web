@@ -18,6 +18,7 @@
 
     <!-- CSS Start -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/Dashboard.css">
     <!-- CSS End -->
 
     <!-- Google Fonts Start -->
