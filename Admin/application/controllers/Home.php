@@ -380,10 +380,10 @@ class Home extends MY_Controller
     $image_temp = $_FILES['image']['tmp_name'];
     move_uploaded_file($image_temp, "assets/images/notification_images/$image");
 
-    //$show_image = "http://localhost/pantryo-web/Admin/assets/images/notification_images/download.jpg";
+    $show_image = "https://pantryo.in/Admin/assets/images/notification_images/$image";
     
 
-    $show_image='https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg';
+    //$show_image='https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg';
 
     if (!empty($partners)) 
     {
