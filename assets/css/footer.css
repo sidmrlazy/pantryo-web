@@ -20,6 +20,7 @@
 .icon-section {
   margin-bottom: 10px;
   border-bottom: 0.5px solid #c7c7c7c7;
+  text-decoration: none !important;
 }
 .icon-section a {
   text-decoration: none !important;
@@ -30,6 +31,7 @@
 #social-icon {
   font-size: 36px;
   margin: 30px;
+  color: #fff !important;
 }
 #social-icon:hover {
   font-size: 36px;

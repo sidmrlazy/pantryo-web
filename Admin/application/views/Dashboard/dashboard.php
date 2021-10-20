@@ -42,9 +42,8 @@
 
                   <?php
                   if (!empty($total_amount)) {
-                    foreach($this->a->login() as $row)
-                    {
-                    echo $row->total_amount;
+                    foreach ($this->a->login() as $row) {
+                      echo $row->total_amount;
                     }
                   } else {
                     echo "00";
@@ -89,9 +88,9 @@
       </a>
     </div>
   </div>
-  
-  <div class="row mt-5">
-  <h1>PantrYo Shops</h1>
+
+  <div class="row mt-5 dashboard-headings">
+    <h1>PantrYo Shops</h1>
     <div class="col-sm-4">
       <a style="text-decoration: none;" href="<?php echo base_url('Home/showshop') ?>">
         <div class="card mt-2 borderradius">
@@ -141,8 +140,8 @@
     </div>
   </div>
 
-  <div class="row mt-5">
-  <h1>PantrYo Delivery Partners</h1>
+  <div class="row mt-5 dashboard-headings">
+    <h1>PantrYo Delivery Partners</h1>
     <div class="col-sm-4">
       <a style="text-decoration: none;" href="<?php echo base_url('Home/showdelivery') ?>">
         <div class="card mt-2 borderradius">
@@ -198,7 +197,8 @@
 <div class="container mb-5">
   <div class="orders">
     <div class="orders-header mb-4">
-      <p>Ongoing Orders</p>
+      <p>Ongoing Orders (Today)</p>
+
     </div>
     <div class="table-responsive mt-5">
       <table id="table_id" class="display" style="width:100%">

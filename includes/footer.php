@@ -3,7 +3,9 @@
         <a href="https://www.instagram.com/pantryoofficial/?utm_medium=copy_link" target="_blank">
             <ion-icon name="logo-instagram" id="social-icon"></ion-icon>
         </a>
-        <ion-icon name="logo-facebook" id="social-icon"></ion-icon>
+        <a href="https://www.facebook.com/pantryoofficial" target="_blank">
+            <ion-icon name="logo-facebook" id="social-icon"></ion-icon>
+        </a>
         <ion-icon name="logo-google-playstore" id="social-icon"></ion-icon>
     </div>
 
