@@ -9,6 +9,8 @@ class Home extends MY_Controller
     $this->load->model('HomeModel', 'home');
     $this->load->model('LoginModel');
     $this->load->library('form_validation');
+    $this->load->helper('form');
+
     if ($this->LoginModel->loggedin() != true) {
       redirect('/');
     }
@@ -373,7 +375,15 @@ class Home extends MY_Controller
     $mobilenumber = $this->input->post('mobilenumber');
     $title = $this->input->post('title');
     $body = $this->input->post('body');
-    // $image='https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg';
+
+    $image = $_FILES['image']['name'];
+    $image_temp = $_FILES['image']['tmp_name'];
+    move_uploaded_file($image_temp, "assets/images/notification_images/$image");
+
+    //$show_image = "http://localhost/pantryo-web/Admin/assets/images/notification_images/download.jpg";
+    
+
+    $show_image='https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg';
 
     if (!empty($partners)) 
     {
@@ -381,6 +391,7 @@ class Home extends MY_Controller
     {
         $this->home->_table_name = 'pantryo_delivery_partner';
          $data = $this->home->get_all_data_bulk();
+         
          foreach ($data as $row)
         {
           $user_token = $row->userToken;
@@ -396,12 +407,12 @@ class Home extends MY_Controller
           'badge' => '1',
           'sound' => 'default',
           'foreground' => true,
-          'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+          'image' => $show_image,
           );
           $arrayToSend = array(
           'to' => $user_token,
           'data' => $notification,
-          'image' => 'https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg',
+          'image' => $show_image,
           'notification' => $notification,
           'priority' => 'high',
           'sound' => 'default',

@@ -17,7 +17,9 @@
 
         <div class="card-body">
           <form class="row g-3" action="<?php echo base_url('Home/sendingnotification') ?>" method="post" enctype="multipart/form-data">
-            <div class="col-md-6 w-100">
+          <div class="row g-3">
+          
+          <div class="col-md-6 w-100">
               <label for="partner_category_id" class="form-label">Partner</label>
               <select class="form-control" name="partners" id="showtext">
                 <option value="">Select Partner</option>
@@ -50,7 +52,8 @@
 
             <div class="col-md-12">
               <label for="body" class="form-label">Image</label>
-              <input type="file" class="form-control" name="file">
+              
+              <input type="file" class="form-control" name="image">
             </div>
 
             <div class="col-md-6">
@@ -61,8 +64,9 @@
                 </div>
               </div>
               <hr>
-
+            </div>
           </form>
+          </div>
         </div>
       </div>
     </div>
