@@ -468,16 +468,6 @@ class Home extends MY_Controller
     $this->home->_table_name = 'pantryo_notification';
     $condition = "notification_id=$id";
     $data = $this->home->get_all_data_bulk($condition);
-    foreach($data as $row)
-    {
-    $delete_image = $row->notification_image;
-    }
-    // $folder_path = $delete_image;
-            $files = glob($delete_image);
-            foreach($files as $file) {
-              if(is_file($file)) 
-                  unlink($file); 
-          }
     $this->home->delete($condition);
     redirect('Home/sendnotification');
   }
