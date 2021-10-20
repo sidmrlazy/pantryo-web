@@ -76,7 +76,9 @@ class Home extends MY_Controller
 
   public function sendnotification()
   {
-    $this->pages('Navigation/sendnotification');
+    $this->home->_table_name = 'pantryo_notification';
+    $data['notification_list'] = $this->home->get_all_data_bulk();
+    $this->pages('Navigation/sendnotification', $data);
   }
 
   public function details()
@@ -370,13 +372,16 @@ class Home extends MY_Controller
 
   public function sendingnotification()
   {
-    $folder_path = "assets/images/notification_images/";
-            $files = glob($folder_path.'/*');
-            foreach($files as $file) {
-              if(is_file($file)) 
-                  unlink($file); 
-          }
-          
+    
+    $today = strtotime('today');
+    $tomorrow = strtotime('tomorrow');
+    // $folder_path = "assets/images/notification_images/";
+    //         $files = glob($folder_path.'/*');
+    //         foreach($files as $file) {
+    //           if(is_file($file)) 
+    //               unlink($file); 
+    //       }
+
     $partners = $this->input->post('partners');
     $usertype = $this->input->post('usertype');
     $mobilenumber = $this->input->post('mobilenumber');
@@ -396,6 +401,17 @@ class Home extends MY_Controller
     {
     if ($partners == 'alldelivery')
     {
+      $sent_to = "All Delivery Partners";
+      $data = array(
+        'notification_time' => $today,
+        'sent_to' => $sent_to,
+        'notification_title' => $this->input->post('title'),
+        'notification_message' => $this->input->post('body'),
+        'notification_image' => $show_image,
+      );
+      $this->home->_table_name = 'pantryo_notification';
+      $id = $this->home->insert($data);
+
         $this->home->_table_name = 'pantryo_delivery_partner';
          $data = $this->home->get_all_data_bulk();
          
@@ -446,10 +462,28 @@ class Home extends MY_Controller
        }
       }
    }
+  public function deletenotification($idd)
+  {
+    $id = base64_decode($idd);
+    $this->home->_table_name = 'pantryo_notification';
+    $condition = "notification_id=$id";
+    $data = $this->home->get_all_data_bulk($condition);
+    foreach($data as $row)
+    {
+    $delete_image = $row->notification_image;
+    }
+    exit();
+    // $folder_path = $delete_image;
+            $files = glob($delete_image);
+            foreach($files as $file) {
+              if(is_file($file)) 
+                  unlink($file); 
+          }
+    $this->home->delete($condition);
+    redirect('Home/sendnotification');
+  }
+
 }
-
-
-
 
 //   public function sendingnotification()
 //   {

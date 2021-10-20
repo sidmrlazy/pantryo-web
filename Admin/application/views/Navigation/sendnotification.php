@@ -1,9 +1,8 @@
 <div class="container">
   <div class="row mt-5">
 
-    <div class="col-sm-2">
-    </div>
-    <div class="col-sm-8">
+    
+    <div class="col-sm-6">
       <div class="card mt-2">
         <div class="card-header">
           <div class="card-heading d-flex justify-content-start align-items-center">
@@ -71,7 +70,50 @@
       </div>
     </div>
 
-    <div class="col-sm-2">
+    <div class="col-sm-6">
+      <div class="orders-header mb-5">
+          <p>Notification History</p>
+      </div>
+      <div class="table-responsive">
+            <table id="table_id" class="display" style="width:100%">
+                <thead>
+                <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Message</th>
+                <th scope="col">Image</th> 
+                <th scope="col">Sent To</th>
+                <th scope="col">Time</th> 
+                <th scope="col">Delete Action</th>         
+              </tr>
+                </thead>
+                <tbody>
+                    <?php if (!empty($notification_list)) {
+                        foreach ($notification_list as $row) {
+                            // print_r($row);
+                    ?>
+
+                            <tr>
+                                <td><?php echo $row->notification_title; ?></td>
+                                <td><?php echo $row->notification_message; ?></td>
+                                <td><?php echo "<img src='$row->notification_image' style='width:30%'"; ?>;</td>
+                                <td><?php echo $row->sent_to; ?></td>
+                                <td><?php echo $row->notification_time; ?></td>
+                                <td><a href="<?php echo base_url('Home/deletenotification/' . base64_encode($row->notification_id)) ?>"><center><ion-icon name="trash-outline" style="color:red"></ion-icon></center></a></th></td>
+                            </tr>
+                        <?php
+                        }
+                    } else {
+                        ?>
+                        <tr center>
+                            <th colspan="6">No Notification
+                            <th>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
 
     </div>
   </div>
