@@ -472,7 +472,6 @@ class Home extends MY_Controller
     {
     $delete_image = $row->notification_image;
     }
-    exit();
     // $folder_path = $delete_image;
             $files = glob($delete_image);
             foreach($files as $file) {
