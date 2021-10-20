@@ -370,6 +370,13 @@ class Home extends MY_Controller
 
   public function sendingnotification()
   {
+    $folder_path = "assets/images/notification_images/";
+            $files = glob($folder_path.'/*');
+            foreach($files as $file) {
+              if(is_file($file)) 
+                  unlink($file); 
+          }
+          
     $partners = $this->input->post('partners');
     $usertype = $this->input->post('usertype');
     $mobilenumber = $this->input->post('mobilenumber');
@@ -435,12 +442,6 @@ class Home extends MY_Controller
             die('FCM Send Error: ' . curl_error($ch));
           }
             curl_close($ch);
-            $folder_path = "assets/images/notification_images/";
-            $files = glob($folder_path.'/*');
-            foreach($files as $file) {
-              if(is_file($file)) 
-                  unlink($file); 
-          }
             redirect('home/sendnotification');
        }
       }
