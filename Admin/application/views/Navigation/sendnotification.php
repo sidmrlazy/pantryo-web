@@ -97,7 +97,10 @@
                                 <td><?php echo $row->notification_message; ?></td>
                                 <td><?php echo "<img src='$row->notification_image' style='width:30%'"; ?>;</td>
                                 <td><?php echo $row->sent_to; ?></td>
-                                <td><?php echo $row->notification_time; ?></td>
+                                <?php 
+                                $time = date('d/M/Y', $row->notification_time)
+                                ?>
+                                <td><?php echo $time; ?></td>
                                 <td><a href="<?php echo base_url('Home/deletenotification/' . base64_encode($row->notification_id)) ?>"><center><ion-icon name="trash-outline" style="color:red"></ion-icon></center></a></th></td>
                             </tr>
                         <?php
