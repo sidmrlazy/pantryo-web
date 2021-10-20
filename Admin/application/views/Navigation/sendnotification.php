@@ -82,7 +82,7 @@
                 <th scope="col">Message</th>
                 <th scope="col">Image</th> 
                 <th scope="col">Sent To</th>
-                <th scope="col">Time</th> 
+                <th scope="col">Date</th> 
                 <th scope="col">Delete Action</th>         
               </tr>
                 </thead>
