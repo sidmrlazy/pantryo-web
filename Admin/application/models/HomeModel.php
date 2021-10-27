@@ -79,4 +79,11 @@ class HomeModel extends MY_Model
         $item_data = $query->result_array();
         return $item_data;
     }
+
+	public function earning_count(){
+		$this->db->select_sum('payment_amount');
+		$this->db->from('pantryo_transaction');
+		$query=$this->db->get();
+		return $query->result();
+	}
 }

@@ -24,7 +24,8 @@ class Dashboard extends MY_Controller
     $data['customer_count'] = count($this->home->get_all_data_bulk());
 
     //daily earning count
-    
+    // $this->home->_table_name = 'delivery_transaction';
+    // $data['daily_earning_count'] = count($this->home->get_all_data_bulk());
 
     //shop partner count
     $this->home->_table_name = 'pantryo_partner';

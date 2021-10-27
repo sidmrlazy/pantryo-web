@@ -30,7 +30,7 @@
 
 
     <div class="col-sm-4">
-      <a style="text-decoration: none;" href="<?php echo base_url('Home/todaysearning') ?>">
+      <a style="text-decoration: none;" href="<?php echo base_url('Home/monthlyearning') ?>">
         <div class="card mt-2 borderradius">
           <div class="card-body">
             <div class="row">
@@ -41,10 +41,8 @@
                   <h6>Daily Earning</h6>
 
                   <?php
-                  if (!empty($total_amount)) {
-                    foreach ($this->a->login() as $row) {
-                      echo $row->total_amount;
-                    }
+                  if (!empty($daily_earning_count)) {
+                    echo $daily_earning_count;
                   } else {
                     echo "00";
                   }
