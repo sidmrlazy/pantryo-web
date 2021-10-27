@@ -36,7 +36,20 @@
            
             <div class="col-md-6">
                 <label for="partnerAcountId" class="form-label">Account Id <span style="color:red">*</span></label>
+                <?php
+                if(!empty($partner_account[0]->account_id))
+                    {
+                ?>
                 <input type="text" class="form-control" name="partnerAcountId"  id="partnerAcountId" required value="<?php echo $partner_account[0]->account_id;?>">
+                <?php
+                    }
+                else
+                {
+                ?>
+                 <input type="text" class="form-control" name="partnerAcountId"  id="partnerAcountId" required">
+                 <?php
+                }
+                ?>
             </div>
             <div class="col-md-12">
                 <div class="col-md-3">

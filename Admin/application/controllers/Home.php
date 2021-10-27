@@ -675,8 +675,28 @@ class Home extends MY_Controller
     $condition1 = "partner_id ='P$partner_id'";
 
     $data['partner_account'] = $this->home->get_all_data_bulk($condition1);
-
     $this->pages('Shop/pendingverifiyform', $data);
+  }
+
+  public function partnerpendingfrom()
+  {
+    $partner_id = $this->input->post('partner_id');
+    $account_id = $this->input->post('partnerAcountId');
+
+    $data = array(
+      'account_id' => $this->input->post('partnerAcountId')
+    );
+    $this->home->_table_name = 'partner_registration_fee';
+    $condition = "partner_id ='P$partner_id'";
+    $effectrow = $this->home->updatedata($data, $condition);
+
+    $data1 = array(
+      'partner_kycStatus' => '2'
+    );
+    $this->home->_table_name = 'pantryo_partner';
+    $condition = "partner_id=$partner_id";
+    $effectrowsec = $this->home->updatedata($data1, $condition);
+    redirect('Home/pendingVerification');
   }
 
 }
@@ -900,21 +920,4 @@ class Home extends MY_Controller
 
 //     $this->pages('Shop/pendingverifiyform', $data);
 //   }
-//   public function partnerpendingfrom()
-//   {
-//     $partner_id = $this->input->post('partner_id');
-
-//     $data = array(
-//       'account_id' => $this->input->post('partnerAcountId')
-//     );
-//     $this->home->_table_name = 'partner_registration_fee';
-//     $condition = "partner_id ='P$partner_id'";
-//     $effectrow = $this->home->updatedata($data, $condition);
-
-//     $data1 = array(
-//       'partner_kycStatus' => '2'
-//     );
-//     $this->home->_table_name = 'pantryo_partner';
-//     $condition = "partner_id=$partner_id";
-//     $effectrowsec = $this->home->updatedata($data1, $condition);
-//   }
+  
