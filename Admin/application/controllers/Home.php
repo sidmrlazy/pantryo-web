@@ -694,9 +694,58 @@ class Home extends MY_Controller
       'partner_kycStatus' => '2'
     );
     $this->home->_table_name = 'pantryo_partner';
-    $condition = "partner_id=$partner_id";
-    $effectrowsec = $this->home->updatedata($data1, $condition);
-    redirect('Home/pendingVerification');
+    $condition1 = "partner_id=$partner_id";
+    $effectrowsec = $this->home->updatedata($data1, $condition1);
+
+    // Notification Start
+
+    $this->home->_table_name = 'pantryo_partner';
+    $data = $this->home->get_all_data_bulk($condition1);
+    
+    foreach ($data as $row)
+   {
+     $user_token = $row->partner_token;
+     
+     $url = "https://fcm.googleapis.com/fcm/send";
+     $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
+     //$title = "New Notification";
+    // $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
+     $notification = array(
+     'title' => 'Welcome Onboard !',
+     'body' => 'Congratulations, Your shop is now verified seller with Pantryo.',
+     'vibrate' => "1",
+     'badge' => '1',
+     'sound' => 'default',
+     'foreground' => true,
+     );
+     $arrayToSend = array(
+     'to' => $user_token,
+     'data' => $notification,
+     'notification' => $notification,
+     'priority' => 'high',
+     'sound' => 'default',
+     );
+     $json = json_encode($arrayToSend);
+     $headers = array();
+     $headers[] = 'Content-Type: application/json';
+     $headers[] = 'Authorization: key=' . $serverKey;
+     $ch = curl_init();
+     curl_setopt($ch, CURLOPT_URL, $url);
+     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+     curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+     $response = curl_exec($ch);
+     //curl_close($ch);
+   }
+   //return $response;
+     if ($response === FALSE) 
+     {
+       die('FCM Send Error: ' . curl_error($ch));
+     }
+       curl_close($ch);
+       redirect('Home/pendingVerification');
+    // Notification End
+    
   }
 
 }
