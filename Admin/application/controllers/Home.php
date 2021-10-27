@@ -29,9 +29,6 @@ class Home extends MY_Controller
     $this->pages('Customer/showcustomer', $data);
   }
 
-  
-
-
 
   // Checked by Aamir till this line
   public function showdelivery()
@@ -399,6 +396,8 @@ class Home extends MY_Controller
 
     if (!empty($partners)) 
     {
+      // For all Delivery Partners
+
     if ($partners == 'alldelivery')
     {
       $sent_to = "All Delivery Partners";
@@ -460,7 +459,200 @@ class Home extends MY_Controller
             curl_close($ch);
             redirect('home/sendnotification');
        }
-      }
+       // For Delivery Partners Ends
+
+      //  For All Shops
+      if ($partners == 'allshop')
+    {
+      $sent_to = "All Shops";
+      $data = array(
+        'notification_time' => $today,
+        'sent_to' => $sent_to,
+        'notification_title' => $this->input->post('title'),
+        'notification_message' => $this->input->post('body'),
+        'notification_image' => $show_image,
+      );
+      $this->home->_table_name = 'pantryo_notification';
+      $id = $this->home->insert($data);
+
+        $this->home->_table_name = 'pantryo_partner';
+         $data = $this->home->get_all_data_bulk();
+         
+         foreach ($data as $row)
+        {
+          $user_token = $row->partner_token;
+          
+          $url = "https://fcm.googleapis.com/fcm/send";
+          $serverKey = 'AAAALC3Ugt8:APA91bFdhqYhHLlDedpHpuCBX7puDR5x1qsrmc6k3gh-pXIBaUoxTJ3t91pVuBwV51GdrSnYLb9McgZYbGnkVR6-A8BnqsUL8nQKN8Bg3qwwH9puZ01uCt4tnGU7w0qNXL0S-x8Ofnaf';
+          //$title = "New Notification";
+         // $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
+          $notification = array(
+          'title' => $title,
+          'body' => $body,
+          'vibrate' => "1",
+          'badge' => '1',
+          'sound' => 'default',
+          'foreground' => true,
+          'image' => $show_image,
+          );
+          $arrayToSend = array(
+          'to' => $user_token,
+          'data' => $notification,
+          'image' => $show_image,
+          'notification' => $notification,
+          'priority' => 'high',
+          'sound' => 'default',
+          );
+          $json = json_encode($arrayToSend);
+          $headers = array();
+          $headers[] = 'Content-Type: application/json';
+          $headers[] = 'Authorization: key=' . $serverKey;
+          $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+          curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+          $response = curl_exec($ch);
+          //curl_close($ch);
+        }
+        //return $response;
+          if ($response === FALSE) 
+          {
+            die('FCM Send Error: ' . curl_error($ch));
+          }
+            curl_close($ch);
+            redirect('home/sendnotification');
+       }
+      // For All shops ends
+
+      // For All Customers
+      if ($partners == 'allcustomer')
+    {
+      $sent_to = "All Customers";
+      $data = array(
+        'notification_time' => $today,
+        'sent_to' => $sent_to,
+        'notification_title' => $this->input->post('title'),
+        'notification_message' => $this->input->post('body'),
+        'notification_image' => $show_image,
+      );
+      $this->home->_table_name = 'pantryo_notification';
+      $id = $this->home->insert($data);
+
+        $this->home->_table_name = 'pantryo_customer';
+         $data = $this->home->get_all_data_bulk();
+         
+         foreach ($data as $row)
+        {
+          $user_token = $row->user_token;
+          
+          $url = "https://fcm.googleapis.com/fcm/send";
+          $serverKey = 'AAAAIIoSzdk:APA91bFqAg9Vu4T-_LYX5EPz9UVtqZTp0bRWOpkJLgm6GqIf4QAJtrW6RISmqWHZl6T-ykQrNLpo39kbRHLBsfGmqyz5JP8hxNCUzrfw8ECkcOItsO173OGeIrPf01_jiTLGjJsgwr33';
+          //$title = "New Notification";
+         // $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
+          $notification = array(
+          'title' => $title,
+          'body' => $body,
+          'vibrate' => "1",
+          'badge' => '1',
+          'sound' => 'default',
+          'foreground' => true,
+          'image' => $show_image,
+          );
+          $arrayToSend = array(
+          'to' => $user_token,
+          'data' => $notification,
+          'image' => $show_image,
+          'notification' => $notification,
+          'priority' => 'high',
+          'sound' => 'default',
+          );
+          $json = json_encode($arrayToSend);
+          $headers = array();
+          $headers[] = 'Content-Type: application/json';
+          $headers[] = 'Authorization: key=' . $serverKey;
+          $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+          curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+          $response = curl_exec($ch);
+          //curl_close($ch);
+        }
+        //return $response;
+          if ($response === FALSE) 
+          {
+            die('FCM Send Error: ' . curl_error($ch));
+          }
+            curl_close($ch);
+            redirect('home/sendnotification');
+       }
+      // For All Customers Ends
+
+      // For mobile numbers
+      if ($partners == 'mobiledrop')
+      {
+        $sent_to = "All Customers";
+        $data = array(
+          'notification_time' => $today,
+          'sent_to' => $sent_to,
+          'notification_title' => $this->input->post('title'),
+          'notification_message' => $this->input->post('body'),
+          'notification_image' => $show_image,
+        );
+        $this->home->_table_name = 'pantryo_notification';
+        $id = $this->home->insert($data);
+  
+          $this->home->_table_name = 'pantryo_customer';
+           $data = $this->home->get_all_data_bulk();
+           
+           foreach ($data as $row)
+          {
+            $user_token = $row->user_token;
+            
+            $url = "https://fcm.googleapis.com/fcm/send";
+            $serverKey = 'AAAAIIoSzdk:APA91bFqAg9Vu4T-_LYX5EPz9UVtqZTp0bRWOpkJLgm6GqIf4QAJtrW6RISmqWHZl6T-ykQrNLpo39kbRHLBsfGmqyz5JP8hxNCUzrfw8ECkcOItsO173OGeIrPf01_jiTLGjJsgwr33';
+            //$title = "New Notification";
+           // $body = "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown.You've visited this page 3 times. Last visit: 16/2/21";
+            $notification = array(
+            'title' => $title,
+            'body' => $body,
+            'vibrate' => "1",
+            'badge' => '1',
+            'sound' => 'default',
+            'foreground' => true,
+            'image' => $show_image,
+            );
+            $arrayToSend = array(
+            'to' => $user_token,
+            'data' => $notification,
+            'image' => $show_image,
+            'notification' => $notification,
+            'priority' => 'high',
+            'sound' => 'default',
+            );
+            $json = json_encode($arrayToSend);
+            $headers = array();
+            $headers[] = 'Content-Type: application/json';
+            $headers[] = 'Authorization: key=' . $serverKey;
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            $response = curl_exec($ch);
+            //curl_close($ch);
+          }
+          //return $response;
+            if ($response === FALSE) 
+            {
+              die('FCM Send Error: ' . curl_error($ch));
+            }
+              curl_close($ch);
+              redirect('home/sendnotification');
+         }
+      // For mobile numbers end
+    }
    }
   public function deletenotification($idd)
   {
@@ -470,6 +662,21 @@ class Home extends MY_Controller
     $data = $this->home->get_all_data_bulk($condition);
     $this->home->delete($condition);
     redirect('Home/sendnotification');
+  }
+
+  public function pendingVerificationshowform($id)
+  {
+    $partner_id = base64_decode($id);
+    $this->home->_table_name = 'pantryo_partner';
+    $condition = "partner_id =$partner_id";
+    $data['partner_details'] = $this->home->get_all_data_bulk($condition);
+
+    $this->home->_table_name = 'partner_registration_fee';
+    $condition1 = "partner_id ='P$partner_id'";
+
+    $data['partner_account'] = $this->home->get_all_data_bulk($condition1);
+
+    $this->pages('Shop/pendingverifiyform', $data);
   }
 
 }
